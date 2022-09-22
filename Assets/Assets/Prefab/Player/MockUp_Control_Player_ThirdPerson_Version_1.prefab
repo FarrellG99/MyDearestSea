@@ -2879,7 +2879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6830687576157578935}
   m_Layer: 0
-  m_Name: MockUp_Control_Player_Version_1
+  m_Name: MockUp_Control_Player_ThirdPerson_Version_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
