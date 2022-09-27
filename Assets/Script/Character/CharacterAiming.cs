@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 public class CharacterAiming : MonoBehaviour
 {
@@ -8,13 +9,28 @@ public class CharacterAiming : MonoBehaviour
     public float yawCamera;
     public bool lockCamera;
     public Camera mainCamera;
+
+    public Rig aimLayer;
+    public float aimDuration = 0.3f;
+
     void Start()
     {
        
         
     }
 
-     void FixedUpdate()
+    private void Update()
+    {
+        if(Input.GetMouseButton (1))
+        {
+            aimLayer.weight += Time.deltaTime / aimDuration;
+        }else
+        {
+            aimLayer.weight -= Time.deltaTime / aimDuration;
+        }
+    }
+
+    void FixedUpdate()
     {
         
         yawCamera = mainCamera.transform.rotation.eulerAngles.y;
