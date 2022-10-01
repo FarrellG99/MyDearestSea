@@ -25,14 +25,15 @@ public class CharacterAiming : MonoBehaviour
     {
         if(aimLayer)
         {
-            if (Input.GetButton("Fire2"))
-            {
-                aimLayer.weight += Time.deltaTime / aimDuration;
-            }
-            else
-            {
-                aimLayer.weight -= Time.deltaTime / aimDuration;
-            }
+            //if (Input.GetButton("Fire2"))
+            //{
+            //    aimLayer.weight += Time.deltaTime / aimDuration;
+            //}
+            //else
+            //{
+            //    aimLayer.weight -= Time.deltaTime / aimDuration;
+            //}
+            aimLayer.weight = 1.0f;
         }
 
         if(Input.GetButtonDown("Fire1"))
