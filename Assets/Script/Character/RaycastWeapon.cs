@@ -49,18 +49,7 @@ public class RaycastWeapon : MonoBehaviour
         accumulateTime = 0.0f;
         FireBullet();
 
-        if (Physics.Raycast(ray, out hitInfo))
-        {
-
-            transform.position = hitInfo.point;
-
-        }
-        else
-        {
-
-            transform.position = ray.origin + ray.direction * 1000.0f;
-
-        }
+       
     }
     void DestroyBullet()
     {

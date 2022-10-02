@@ -13,11 +13,11 @@ public class CharacterAiming : MonoBehaviour
     public Rig aimLayer;
     public float aimDuration = 0.3f;
 
-    RaycastWeapon weapon;
+    
 
     void Start()
     {
-        weapon = GetComponentInChildren<RaycastWeapon>();
+        
         
     }
 
@@ -36,20 +36,7 @@ public class CharacterAiming : MonoBehaviour
             aimLayer.weight = 1.0f;
         }
 
-        if(Input.GetButtonDown("Fire1"))
-        {
-            weapon.StartFiring();
-        }
-
-        if(weapon.isFiring)
-        {
-            weapon.UpdateFiring(Time.deltaTime);
-        }
-        weapon.UpdateBullet(Time.deltaTime);
-        if(Input.GetButtonUp("Fire1"))
-        {
-            weapon.StopFiring();
-        }
+       
         
     }
 
