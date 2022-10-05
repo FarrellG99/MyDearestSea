@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class CharacterInventory : MonoBehaviour
 {
-    public InventoryObject inventory;
+    public InventoryObject junkInventory;
+    public InventoryObject toolInventory;
 
     public void OnTriggerEnter(Collider other)
     {
         var item = other.GetComponent<Item>();
         if (item)
         {
-            inventory.AddItem(item.item, 1);
+            junkInventory.AddItem(item.item, 1);
             Destroy(other.gameObject);
+            Debug.Log("E kepencet");
+
         }
     }
     private void OnApplicationQuit()
     {
-        inventory.Container.Clear();
+        junkInventory.Container.Clear();
     }
 }

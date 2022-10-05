@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Class untuk object Item secara general
 public enum ItemType
 {
     Junk,
