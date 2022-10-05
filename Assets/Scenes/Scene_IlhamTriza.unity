@@ -1579,7 +1579,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2444383605566830298}
-  m_LocalRotation: {x: 0.15734494, y: -0.000000008496026, z: 0.0000000013536684, w: 0.9875437}
+  m_LocalRotation: {x: 0.15734494, y: 0.000000008496026, z: -0.0000000013536684, w: 0.9875437}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2040,7 +2040,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2444383606165167585}
-  m_LocalRotation: {x: 0.13940358, y: -0.000000019049477, z: 0.0000000026817506, w: 0.9902357}
+  m_LocalRotation: {x: 0.13940358, y: 0.000000019049477, z: -0.0000000026817506, w: 0.9902357}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2626,7 +2626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887a74fb4fd70bd47a8819efc1fee90f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
+  junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
+  toolInventory: {fileID: 11400000, guid: 83e54614ad54c0045af4964bb4513471, type: 2}
 --- !u!1 &2444383606451350118
 GameObject:
   m_ObjectHideFlags: 0
@@ -3993,6 +3994,8 @@ MonoBehaviour:
   yawCamera: 1
   lockCamera: 0
   mainCamera: {fileID: 1703568173401299196}
+  aimLayer: {fileID: 0}
+  aimDuration: 0.3
 --- !u!1 &2444383606613650113
 GameObject:
   m_ObjectHideFlags: 0
@@ -4075,7 +4078,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2258355076278826945}
-  m_LocalRotation: {x: 0.15734494, y: -0.000000016992054, z: 0.0000000027073368, w: 0.98754376}
+  m_LocalRotation: {x: 0.15734494, y: 0.000000016992054, z: -0.0000000027073368, w: 0.98754376}
   m_LocalPosition: {x: 0.3800001, y: 2.618474, z: -3.845023}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
