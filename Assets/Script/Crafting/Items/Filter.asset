@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bb677bbae85e646939700aea5ddc3c, type: 3}
   m_Name: Filter
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 3796496394121350908, guid: d73ef69a328b1ac4ba2b61b3cc9cd2dc, type: 3}
   type: 1
   description: 
