@@ -1,7 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor.Animations;
+#endif
+
+
 
 public class ActiveWeapon : MonoBehaviour
 {
@@ -77,7 +82,7 @@ public class ActiveWeapon : MonoBehaviour
 
     }
 
-    [ContextMenu("Save Weapon Pose")]
+    /*[ContextMenu("Save Weapon Pose")]
     void SaveWeaponPose()
     {
         GameObjectRecorder recorder = new GameObjectRecorder(gameObject);
@@ -87,7 +92,7 @@ public class ActiveWeapon : MonoBehaviour
 
         recorder.TakeSnapshot(0.0f);
         recorder.SaveToClip(weapon.weaponAnimation);
-    }
+    }*/
 
 
 }
