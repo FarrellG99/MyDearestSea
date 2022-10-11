@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private float _maxHealth = 3;
-    //[SerializeField] private GameObject _deathEffect, _hitEffect;
+    [SerializeField] private GameObject _deathEffect;
     private float _currentHealth;
     [SerializeField] private EnemyHealthBar _healthbar;
     [SerializeField] private float DamageWeaponTake;
@@ -27,13 +27,13 @@ public class EnemyHealth : MonoBehaviour
             
             if (_currentHealth <= 0)
             {
-
+                Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
                 Destroy(gameObject);
             }
             else
             {
                 _healthbar.UpdateHelathBar(_maxHealth, _currentHealth);
-
+                //Instantiate(hitEffect, transform.position, Quaternion.identity);
             }
         }
     }
