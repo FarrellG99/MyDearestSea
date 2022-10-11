@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     //[SerializeField] private GameObject _deathEffect, _hitEffect;
     private float _currentHealth;
     [SerializeField] private EnemyHealthBar _healthbar;
+    [SerializeField] private float DamageWeaponTake;
     void Start()
     {
         _currentHealth = _maxHealth;
@@ -15,19 +16,41 @@ public class EnemyHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void OnMouseDown()
+    public void OnTriggerEnter(Collider other)
     {
-        _currentHealth -= Random.Range(0.5f, 1.5f);
-        if(_currentHealth <= 0 )
+        
+        
+        if (other.gameObject.tag == "Bullet")
         {
+            _currentHealth -= DamageWeaponTake;
+            Debug.Log("KenaLoo1");
             
-            Destroy(gameObject);
-        }else
-        {
-            _healthbar.UpdateHelathBar(_maxHealth, _currentHealth); 
-          
+            if (_currentHealth <= 0)
+            {
+
+                Destroy(gameObject);
+            }
+            else
+            {
+                _healthbar.UpdateHelathBar(_maxHealth, _currentHealth);
+
+            }
         }
-
-
     }
+ 
+    //private void OnMouseDown()
+    //{
+    //    _currentHealth -= Random.Range(0.5f, 1.5f);
+    //    if(_currentHealth <= 0 )
+    //    {
+            
+    //        Destroy(gameObject);
+    //    }else
+    //    {
+    //        _healthbar.UpdateHelathBar(_maxHealth, _currentHealth); 
+          
+    //    }
+
+
+    //}
 }
