@@ -37,17 +37,17 @@ public class ActiveWeapon : MonoBehaviour
         {
             anim.SetLayerWeight(1, 1.0f);
             hankIK.weight = 1.0f;
-            if (Input.GetButtonDown("Fire1"))
+            if (weapon.tag == "Gun" && Input.GetButtonDown("Fire1"))
             {
                 weapon.StartFiring();
             }
 
-            if (weapon.isFiring)
+            if (weapon.tag == "Gun" && weapon.isFiring)
             {
                 weapon.UpdateFiring(Time.deltaTime);
             }
             weapon.UpdateBullet(Time.deltaTime);
-            if (Input.GetButtonUp("Fire1"))
+            if (weapon.tag == "Gun" && Input.GetButtonUp("Fire1"))
             {
                 weapon.StopFiring();
             }

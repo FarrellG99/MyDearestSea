@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - CinemachineTarget
   - Enemy
+  - Gun
+  - Sapu
   layers:
   - Default
   - TransparentFX

@@ -19165,7 +19165,7 @@ GameObject:
   - component: {fileID: 2731858557720940554}
   m_Layer: 0
   m_Name: Weapon_WaterGun_2
-  m_TagString: Bullet
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19275,7 +19275,6 @@ MonoBehaviour:
   raycastDestination: {fileID: 0}
   tracerEffect: {fileID: 2208994421704029535, guid: 2f2de3d1369689f4c961683dc7f26f19, type: 3}
   weaponAnimation: {fileID: 7400000, guid: 4cff40b3e5548a54cb50f66483f0e2cb, type: 2}
-  damageWeapon: 0
 --- !u!1 &2732142741683659067
 GameObject:
   m_ObjectHideFlags: 0
