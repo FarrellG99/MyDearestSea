@@ -82,7 +82,7 @@ public class ActiveWeapon : MonoBehaviour
 
     }
 
-    /*[ContextMenu("Save Weapon Pose")]
+    [ContextMenu("Save Weapon Pose")]
     void SaveWeaponPose()
     {
         GameObjectRecorder recorder = new GameObjectRecorder(gameObject);
@@ -92,7 +92,7 @@ public class ActiveWeapon : MonoBehaviour
 
         recorder.TakeSnapshot(0.0f);
         recorder.SaveToClip(weapon.weaponAnimation);
-    }*/
+    }
 
 
 }
