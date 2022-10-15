@@ -53,7 +53,7 @@ MonoBehaviour:
   raycastOrigin: {fileID: 0}
   raycastDestination: {fileID: 0}
   tracerEffect: {fileID: 0}
-  weaponAnimation: {fileID: 7400000, guid: c25ccfec12c4f5a4ca2717f8d198e620, type: 2}
+  weaponName: filter
 --- !u!1 &4985559437949244289
 GameObject:
   m_ObjectHideFlags: 0

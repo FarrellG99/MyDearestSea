@@ -22,7 +22,7 @@ public class RaycastWeapon : MonoBehaviour
     public Transform raycastOrigin;
     public Transform raycastDestination;
     public TrailRenderer tracerEffect;
-    public AnimationClip weaponAnimation;
+    public string weaponName;
     
 
     Ray ray;
@@ -58,12 +58,11 @@ public class RaycastWeapon : MonoBehaviour
     }
     public void StartFiring()
     {
-        if(gameObject.tag == "Gun")
-        {
+       
             isFiring = true;
             accumulateTime = 0.0f;
             FireBullet();
-        }
+        
        
 
        
