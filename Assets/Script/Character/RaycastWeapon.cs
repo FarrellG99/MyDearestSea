@@ -11,7 +11,7 @@ public class RaycastWeapon : MonoBehaviour
         public Vector3 initialVelocity;
         public TrailRenderer tracer;
     }
-
+   
     public int fireRate = 25;
     public float bulletSpeed = 1000.0f;
     public float bulletDrop = 0.0f; 
@@ -32,25 +32,39 @@ public class RaycastWeapon : MonoBehaviour
     List<Bullet> bullets = new List<Bullet>();
     Vector3 GetPosition(Bullet bullet)
     {
-        Vector3 gravity = Vector3.down * bulletDrop;
+       
+        
+            Vector3 gravity = Vector3.down * bulletDrop;
+            
+        
         return (bullet.initialPosition) + (bullet.initialVelocity * bullet.time) + (0.5f * gravity * bullet.time * bullet.time);
+
     }
 
     Bullet CreateBullet(Vector3 position, Vector3 velocity)
     {
-        Bullet bullet = new Bullet();
-        bullet.initialPosition = position;
-        bullet.initialVelocity = velocity;
-        bullet.time = 0.0f;
-        bullet.tracer = Instantiate(tracerEffect, position, Quaternion.identity);
-        bullet.tracer.AddPosition(position);
+        
+        
+            Bullet bullet = new Bullet();
+            bullet.initialPosition = position;
+            bullet.initialVelocity = velocity;
+            bullet.time = 0.0f;
+            bullet.tracer = Instantiate(tracerEffect, position, Quaternion.identity);
+            bullet.tracer.AddPosition(position);
+           
+        
         return bullet;
+
     }
     public void StartFiring()
     {
-        isFiring = true;
-        accumulateTime = 0.0f;
-        FireBullet();
+        if(gameObject.tag == "Gun")
+        {
+            isFiring = true;
+            accumulateTime = 0.0f;
+            FireBullet();
+        }
+       
 
        
     }
@@ -60,6 +74,7 @@ public class RaycastWeapon : MonoBehaviour
     }
     public void UpdateFiring(float deltaTime)
     {
+
         accumulateTime += deltaTime;
         float fireInterval = 1.0f / fireRate;
         while(accumulateTime >= 0.0f)

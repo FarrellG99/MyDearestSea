@@ -28964,12 +28964,11 @@ MonoBehaviour:
   bulletSpeed: 1000
   bulletDrop: 0
   isFiring: 0
-  muzzleFlash:
-  - {fileID: 3301261310822919861}
-  hitEffect: {fileID: 710059262123855242}
-  raycastOrigin: {fileID: 142204089282152180}
+  muzzleFlash: []
+  hitEffect: {fileID: 0}
+  raycastOrigin: {fileID: 0}
   raycastDestination: {fileID: 0}
-  tracerEffect: {fileID: 2208994421704029535, guid: 2f2de3d1369689f4c961683dc7f26f19, type: 3}
+  tracerEffect: {fileID: 0}
   weaponAnimation: {fileID: 7400000, guid: f45266c5d6b853a44b83f875bf2cb904, type: 2}
 --- !u!1 &5737184168527516867
 GameObject:

@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Gun
   - Sapu
+  - FilterAir
   layers:
   - Default
   - TransparentFX

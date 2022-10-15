@@ -18,7 +18,7 @@ public class CharacterHealth : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             _currentHealth -= 1;
-            Debug.Log("KenaLoo1");
+            Debug.Log("KenaLoo");
 
             if (_currentHealth <= 0)
             {

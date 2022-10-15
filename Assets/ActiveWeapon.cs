@@ -12,6 +12,7 @@ public class ActiveWeapon : MonoBehaviour
 {
     public Transform crossHitTarget;
     RaycastWeapon weapon;
+    
     public Transform weaponParent;
     public Transform weaponLeftGrip;
     public Transform WeaponRightGrip;
@@ -24,10 +25,13 @@ public class ActiveWeapon : MonoBehaviour
         anim = GetComponent<Animator>();
         overrides = anim.runtimeAnimatorController as AnimatorOverrideController;
         RaycastWeapon existingWeapon = GetComponentInChildren<RaycastWeapon>();
-        if(existingWeapon)
+        
+        if (existingWeapon)
         {
+           
             Equip(existingWeapon);
         }
+       
     }
 
     // Update is called once per frame
@@ -51,7 +55,18 @@ public class ActiveWeapon : MonoBehaviour
             {
                 weapon.StopFiring();
             }
-        }else
+
+            if (weapon.tag == "Sapu" && Input.GetButtonDown("Fire1"))
+            {
+                Debug.Log("Kali 2");
+            }
+            if (weapon.tag == "FilterAir" )
+            {
+                hankIK.weight = 0.0f;
+            }
+        }
+       
+        else
         {
             hankIK.weight = 0.0f;
             anim.SetLayerWeight(1, 0.0f);
