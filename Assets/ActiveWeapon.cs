@@ -72,7 +72,7 @@ public class ActiveWeapon : MonoBehaviour
             }
             if (weapon.tag == "FilterAir" )
             {
-                hankIK.weight = 0.0f;
+                
             }
         }
        
