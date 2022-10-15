@@ -508,9 +508,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3c2848bb7f8ea43bd1d151760f10bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gubug: {fileID: 204241560}
+  pondok: {fileID: 204241560}
   craftingPanel: {fileID: 1189656565}
   craftPromptText: {fileID: 449801402}
+  junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
+  toolInventory: {fileID: 11400000, guid: 83e54614ad54c0045af4964bb4513471, type: 2}
+  sapuRecipe: {fileID: 11400000, guid: 643ae49b6f01f8a41a7046da71d02f09, type: 2}
+  pistolRecipe: {fileID: 11400000, guid: b404ca1aadef02f40b188a577005ff5e, type: 2}
 --- !u!1 &414991550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,7 +1331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.41293016
+      value: 0.41293028
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1347,11 +1351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0053343116
+      value: -0.005334333
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00084928586
+      value: 0.0008492891
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1972,36 +1976,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752514150}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1825213948
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1825213949}
-  m_Layer: 0
-  m_Name: CraftingManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1825213949
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825213948}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.516898, y: 4.00626, z: -1.7032653}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1996703513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,6 +2248,14 @@ PrefabInstance:
     - target: {fileID: 326724323815613040, guid: 2469731b6b6511d41afb96ad41f406a7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 326724324421908799, guid: 2469731b6b6511d41afb96ad41f406a7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 67d1dd268593cbf4da30e7b41b3e4942, type: 2}
+    - target: {fileID: 326724324421908799, guid: 2469731b6b6511d41afb96ad41f406a7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 326724325443912435, guid: 2469731b6b6511d41afb96ad41f406a7, type: 3}
       propertyPath: m_Name
@@ -3063,6 +3045,14 @@ PrefabInstance:
     - target: {fileID: 1641386344742509238, guid: 9707371dbc2aac244af7157e52865e54, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975361114912082881, guid: 9707371dbc2aac244af7157e52865e54, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 67d1dd268593cbf4da30e7b41b3e4942, type: 2}
+    - target: {fileID: 3975361114912082881, guid: 9707371dbc2aac244af7157e52865e54, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9707371dbc2aac244af7157e52865e54, type: 3}
@@ -5468,7 +5458,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8321429156101901161}
-  m_LocalRotation: {x: -0.15689415, y: 0.06466589, z: -0.010295578, w: -0.98544234}
+  m_LocalRotation: {x: -0.15689415, y: 0.064665906, z: -0.010295582, w: -0.98544234}
   m_LocalPosition: {x: 0, y: 0, z: -0.00000047683716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

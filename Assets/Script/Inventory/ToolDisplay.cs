@@ -27,22 +27,29 @@ public class ToolDisplay : MonoBehaviour
     {
         CreateDisplay();
         totalTools = inventory.Container.Count;
-        tools = new GameObject[totalTools];
+        tools = new GameObject[3];
 
-        for (int i=0;i < totalTools; i++)
+        if(totalTools > 0)
         {
-            tools[i] = toolHolder.transform.GetChild(i).gameObject;
-            tools[i].SetActive(false);
+            for (int i = 0; i < totalTools; i++)
+            {
+                tools[i] = toolHolder.transform.GetChild(i).gameObject;
+                tools[i].SetActive(false);
+            }
+            tools[0].SetActive(true);
+            currentTool = tools[0];
+            currentToolIndex = 0;
         }
-        tools[0].SetActive(true);
-        currentTool = tools[0];
-        currentToolIndex = 0;
     }
 
 
     void Update()
     {
         UpdateDisplay();
+        if(totalTools == 1)
+        {
+            tools[0].SetActive(true);
+        }
         if (Input.GetKeyDown(KeyCode.Q))
         {
             //ke tool selanjutnya
@@ -50,12 +57,14 @@ public class ToolDisplay : MonoBehaviour
             {
                 tools[currentToolIndex].SetActive(false);
                 currentToolIndex++;
+                currentTool = tools[currentToolIndex];
                 tools[currentToolIndex].SetActive(true);
             }
             else if(currentToolIndex == totalTools - 1)
             {
                 tools[currentToolIndex].SetActive(false);
                 currentToolIndex = 0;
+                currentTool = tools[currentToolIndex];
                 tools[currentToolIndex].SetActive(true);
             }
         }
@@ -70,7 +79,6 @@ public class ToolDisplay : MonoBehaviour
             if (itemsDisplayed.ContainsKey(inventory.Container[i]))
             {
                 var obj2 = itemsDisplayed[inventory.Container[i]].transform.GetChild(0);
-                //GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
             }
             //Kalau di container belum ada objectnya maka akan ditambahkan nama object yang diambil beserta amountnya
             else
@@ -78,6 +86,15 @@ public class ToolDisplay : MonoBehaviour
                 var obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
                 itemsDisplayed.Add(inventory.Container[i], obj);
+                totalTools++;
+                tools[totalTools-1] = toolHolder.transform.GetChild(totalTools-1).gameObject;
+                if(totalTools > 0)
+                {
+                    tools[currentToolIndex].SetActive(false);
+                    currentToolIndex = totalTools - 1;
+                    tools[currentToolIndex].SetActive(true);
+                }
+                
             }
         }
     }

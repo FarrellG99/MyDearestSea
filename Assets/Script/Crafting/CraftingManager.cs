@@ -9,6 +9,12 @@ public class CraftingManager : MonoBehaviour
     public GameObject craftingPanel;
     public TextMeshProUGUI craftPromptText;
 
+    public InventoryObject junkInventory;
+    public InventoryObject toolInventory;
+
+    public CraftingRecipe sapuRecipe;
+    public CraftingRecipe pistolRecipe;
+
     private bool menuOpened;
     private bool withinPondokRange;
     private bool craftAllowed;
@@ -28,19 +34,34 @@ public class CraftingManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                craftingPanel.SetActive(true);
-                craftPromptText.gameObject.SetActive(false);
-                craftAllowed = true;
-            }
-            if (menuOpened)
-            {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (!craftingPanel.activeInHierarchy)
                 {
-                    craftingPanel.SetActive(false);
-                    craftPromptText.gameObject.SetActive(true);
-                    menuOpened = false;
+                    OpenCraftingMenu();
+                    craftAllowed = true;
+                }
+                else
+                {
+                    CloseCraftingMenu();
+                    craftAllowed = false;
                 }
             }
+
+            if (craftAllowed)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    CraftSapuLidi();
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    Debug.Log("Craft Filter Air");
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    CraftPistolAir();
+                }
+            }
+            
         }
         
     }
@@ -49,7 +70,6 @@ public class CraftingManager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("masuk gubug");
             withinPondokRange = true;
             craftPromptText.gameObject.SetActive(true);
         }
@@ -60,7 +80,6 @@ public class CraftingManager : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             craftingPanel.SetActive(false);
-            Debug.Log("keluar gubug");
             withinPondokRange = false;
             craftPromptText.gameObject.SetActive(false);
         }
@@ -69,19 +88,49 @@ public class CraftingManager : MonoBehaviour
     private void OpenCraftingMenu()
     {
         craftingPanel.SetActive(true);
-        menuOpened = true;
-        Debug.Log("Menu kebuka: " + menuOpened);
+        craftPromptText.gameObject.SetActive(false);
+        craftAllowed = true;
+        Debug.Log("Boleh craft? " + craftAllowed);
     }
 
     private void CloseCraftingMenu()
     {
         craftingPanel.SetActive(false);
-        menuOpened = false;
-        Debug.Log("Menu kebuka: " + menuOpened);
+        craftPromptText.gameObject.SetActive(true);
+        craftAllowed = false;
+        Debug.Log("Boleh craft? " + craftAllowed);
     }
 
     private void Crafting()
     {
+        if (craftAllowed)
+        {
+            Debug.Log("Masuk Crafting");
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                sapuRecipe.Craft(junkInventory,toolInventory);
+                Debug.Log("Craft Sapu lidi");
+            }
+            else if (Input.GetKeyDown(KeyCode.X))
+            {
+                Debug.Log("Craft Filter Air");
+            }
+            else if (Input.GetKeyDown(KeyCode.C))
+            {
+                Debug.Log("Craft Pistol Air");
+            }
+        }
+    }
+    
+    public void CraftSapuLidi()
+    {
+        sapuRecipe.Craft(junkInventory, toolInventory);
+        Debug.Log("Craft Sapu lidi");
+    }
 
+    public void CraftPistolAir()
+    {
+        pistolRecipe.Craft(junkInventory, toolInventory);
+        Debug.Log("Craft Pistol Air");
     }
 }

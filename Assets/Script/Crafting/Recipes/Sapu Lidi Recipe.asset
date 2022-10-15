@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68bd46dcd623df4fb1b166be7f6ae49, type: 3}
+  m_Name: Sapu Lidi Recipe
+  m_EditorClassIdentifier: 
+  materials:
+  - item: {fileID: 11400000, guid: 57dee05cd3191d84f9586ee3251d1880, type: 2}
+    amount: 2
+  - item: {fileID: 11400000, guid: 558930375a302e74ab983d0700cea2ae, type: 2}
+    amount: 1
+  results:
+  - item: {fileID: 11400000, guid: 1a6fb4e0bcf9d674ab74bc8dc9b2752e, type: 2}
+    amount: 1
