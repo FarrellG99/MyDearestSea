@@ -5,29 +5,44 @@ using UnityEngine;
 
 public class CraftingManager : MonoBehaviour
 {
-    public GameObject gubug;
+    public GameObject pondok;
     public GameObject craftingPanel;
     public TextMeshProUGUI craftPromptText;
 
+    private bool menuOpened;
+    private bool withinPondokRange;
     private bool craftAllowed;
     // Start is called before the first frame update
     void Start()
     {
-        craftAllowed = false;
+        withinPondokRange = false;
         craftPromptText.gameObject.SetActive(false);
+        menuOpened = false;
+        craftAllowed = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (craftAllowed && Input.GetKeyDown(KeyCode.E))
+        if (withinPondokRange)
         {
-            craftingPanel.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                craftingPanel.SetActive(true);
+                craftPromptText.gameObject.SetActive(false);
+                craftAllowed = true;
+            }
+            if (menuOpened)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    craftingPanel.SetActive(false);
+                    craftPromptText.gameObject.SetActive(true);
+                    menuOpened = false;
+                }
+            }
         }
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            craftPromptText.gameObject.SetActive(false);
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,7 +50,7 @@ public class CraftingManager : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("masuk gubug");
-            craftAllowed = true;
+            withinPondokRange = true;
             craftPromptText.gameObject.SetActive(true);
         }
     }
@@ -45,10 +60,24 @@ public class CraftingManager : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             craftingPanel.SetActive(false);
-            Debug.Log("masuk gubug");
-            craftAllowed = false;
+            Debug.Log("keluar gubug");
+            withinPondokRange = false;
             craftPromptText.gameObject.SetActive(false);
         }
+    }
+
+    private void OpenCraftingMenu()
+    {
+        craftingPanel.SetActive(true);
+        menuOpened = true;
+        Debug.Log("Menu kebuka: " + menuOpened);
+    }
+
+    private void CloseCraftingMenu()
+    {
+        craftingPanel.SetActive(false);
+        menuOpened = false;
+        Debug.Log("Menu kebuka: " + menuOpened);
     }
 
     private void Crafting()

@@ -10,7 +10,9 @@ public class InventoryDisplay : MonoBehaviour
     public int X_START;//Posisi X awal di panel
     public int Y_START;//Posisi Y awal di panel
     public int Y_SPACE_BETWEEN_ITEMS; //Jarak Y tiap baris
+    public int X_SPACE_BETWEEN_ITEMS; //Jarak X tiap baris
     public int NUMBER_OF_ROWS;//Jumlah baris
+    public int NUMBER_OF_COLUMNS;//Jumlah baris
     Dictionary<InventorySlot, GameObject> itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
     // Start is called before the first frame update
     void Start()
@@ -62,7 +64,7 @@ public class InventoryDisplay : MonoBehaviour
 
     public Vector3 GetPosition(int i)
     {
-        return new Vector3(X_START, Y_START + (-Y_SPACE_BETWEEN_ITEMS * (i % NUMBER_OF_ROWS)), 0f);
+        return new Vector3(X_START + (X_SPACE_BETWEEN_ITEMS * (i % NUMBER_OF_COLUMNS)), Y_START + (-Y_SPACE_BETWEEN_ITEMS * (i % NUMBER_OF_ROWS)), 0f);
     }
 
 }

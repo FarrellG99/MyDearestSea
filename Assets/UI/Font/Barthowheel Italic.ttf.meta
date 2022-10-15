@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ca9b43817684d4d40b0e6acb52f5d46a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Barthowheel
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 24d5a8ab0ed9b8249b2d9384a50accbd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
