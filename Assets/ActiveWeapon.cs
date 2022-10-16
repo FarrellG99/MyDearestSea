@@ -65,36 +65,36 @@ public class ActiveWeapon : MonoBehaviour
         
         if(weapon && !isHostered)
         {
-            weapon.UpdateWeapon(Time.deltaTime);
+           
 
-            //if ( Input.GetButtonDown("Fire1"))
-            //{
-            //    weapon.StartFiring();
-            //}
+            if (weapon.tag == "Gun" && Input.GetButtonDown("Fire1"))
+            {
+                weapon.StartFiring();
+            }
 
-            //if ( weapon.isFiring)
-            //{
-            //    weapon.UpdateFiring(Time.deltaTime);
-            //}
-            //weapon.UpdateBullet(Time.deltaTime);
-            //if ( Input.GetButtonUp("Fire1"))
-            //{
-            //    weapon.StopFiring();
-            //}
+            if (weapon.tag == "Gun" && weapon.isFiring)
+            {
+                weapon.UpdateFiring(Time.deltaTime);
+            }
+            weapon.UpdateBullet(Time.deltaTime);
+            if (weapon.tag == "Gun" && Input.GetButtonUp("Fire1"))
+            {
+                weapon.StopFiring();
+            }
             if (Input.GetKeyDown(KeyCode.X))
             {
                 ToggleActiveWeapon();
                 
             }
 
-            //if (weapon.tag == "Sapu" && Input.GetButtonDown("Fire1"))
-            //{
-            //    Debug.Log("Kali 2");
-            //}
-            //if (weapon.tag == "FilterAir" )
-            //{
-
-            //}
+            if (weapon.tag == "Sapu" && Input.GetButtonDown("Fire1"))
+            {
+                Debug.Log("Kali 2");
+            }
+            if (weapon.tag == "FilterAir" && Input.GetButtonDown("Fire1"))
+            {
+                Debug.Log("Diem Disini");
+            }
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha1))

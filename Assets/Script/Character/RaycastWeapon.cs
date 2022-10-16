@@ -136,36 +136,7 @@ public class RaycastWeapon : MonoBehaviour
         //tracer.AddPosition(ray.origin);
     
     }
-    public void UpdateWeapon(float deltaTime)
-    {
-
-        if (Input.GetButtonDown("Fire1"))
-
-        {
-
-            StartFiring();
-
-        }
-
-        if (isFiring)
-
-        {
-
-            UpdateFiring(deltaTime);
-
-        }
-
-        UpdateBullet(deltaTime);
-
-        if (Input.GetButtonUp("Fire1"))
-
-        {
-
-            StopFiring();
-
-        }
-
-    }
+   
 
 
 
