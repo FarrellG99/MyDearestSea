@@ -319,8 +319,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117862888}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.6946333, y: -0.000056657947, z: 0.000054284938, w: 0.719364}
+  m_LocalPosition: {x: -0.2790095, y: 0.086997986, z: -0.095000945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1989906527}
@@ -1193,8 +1193,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774901884}
-  m_LocalRotation: {x: 0.781476, y: 0.11289242, z: -0.094610736, w: 0.6062997}
-  m_LocalPosition: {x: 0.18041264, y: 0.49738312, z: -0.2223377}
+  m_LocalRotation: {x: 0.6946333, y: -0.00005665839, z: 0.000054282733, w: 0.71936405}
+  m_LocalPosition: {x: -0.141, y: 0.081, z: -0.435}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 578888886}
@@ -1368,8 +1368,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840382063}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.7966317, y: 0.109262966, z: -0.084694184, w: 0.58844423}
+  m_LocalPosition: {x: 0.073309466, y: 0.06341861, z: -0.21454781}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1869959523}
@@ -1394,10 +1394,10 @@ MonoBehaviour:
       m_Length: 2
       m_Item0:
         transform: {fileID: 1989906527}
-        weight: 1
+        weight: 0
       m_Item1:
         transform: {fileID: 1389576572}
-        weight: 0
+        weight: 1
       m_Item2:
         transform: {fileID: 0}
         weight: 0
@@ -1930,8 +1930,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209009149}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.3505311, y: 0.63526714, z: -0.32519358, w: -0.60647565}
+  m_LocalPosition: {x: -0.11, y: -0.01, z: -0.568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1869959523}
@@ -1956,10 +1956,10 @@ MonoBehaviour:
       m_Length: 2
       m_Item0:
         transform: {fileID: 1989906527}
-        weight: 1
+        weight: 0
       m_Item1:
         transform: {fileID: 1565715658}
-        weight: 0
+        weight: 1
       m_Item2:
         transform: {fileID: 0}
         weight: 0
@@ -2204,8 +2204,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361582785}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.69463325, y: -0.000056658388, z: 0.00005428273, w: 0.719364}
+  m_LocalPosition: {x: -0.279, y: 0.087, z: -0.095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1869959523}
@@ -2230,10 +2230,10 @@ MonoBehaviour:
       m_Length: 2
       m_Item0:
         transform: {fileID: 1989906527}
-        weight: 1
+        weight: 0
       m_Item1:
         transform: {fileID: 774901885}
-        weight: 0
+        weight: 1
       m_Item2:
         transform: {fileID: 0}
         weight: 0
@@ -2440,8 +2440,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565715657}
-  m_LocalRotation: {x: 0.781476, y: 0.11289242, z: -0.094610736, w: 0.6062997}
-  m_LocalPosition: {x: 0.18041264, y: 0.49738312, z: -0.2223377}
+  m_LocalRotation: {x: 0.3505311, y: 0.63526714, z: -0.32519358, w: -0.60647565}
+  m_LocalPosition: {x: 0.005, y: 0.445, z: -0.559}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 578888886}
@@ -4470,7 +4470,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossHitTarget: {fileID: 915802048}
-  weaponParent: {fileID: 840382064}
+  weaponSlot:
+  - {fileID: 840382064}
+  - {fileID: 1361582786}
+  - {fileID: 1209009150}
   weaponLeftGrip: {fileID: 97712395}
   WeaponRightGrip: {fileID: 160663917}
   hankIK: {fileID: 1437569059}

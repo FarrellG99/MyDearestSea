@@ -28828,7 +28828,6 @@ GameObject:
   - component: {fileID: 4395778184743885432}
   - component: {fileID: 4395778184743885436}
   - component: {fileID: 4395778184743885439}
-  - component: {fileID: 4395778184743885438}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -28844,8 +28843,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4395778184743885435}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
+  m_LocalPosition: {x: -0.0087, y: 0.0235, z: -0.5846}
+  m_LocalScale: {x: 0.094105944, y: 0.03293034, z: 0.9671302}
   m_Children: []
   m_Father: {fileID: 4395778185932130369}
   m_RootOrder: 4
@@ -28899,19 +28898,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4395778184743885438
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4395778184743885435}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4395778185932130368
 GameObject:
   m_ObjectHideFlags: 0
@@ -28960,6 +28946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af5188adeacc7d3489cb0d420cdc7b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponSlot: 1
   fireRate: 25
   bulletSpeed: 1000
   bulletDrop: 0

@@ -10,10 +10,17 @@ using UnityEditor.Animations;
 
 public class ActiveWeapon : MonoBehaviour
 {
+    public enum WeaponSlot
+    {
+        Gun = 0,
+        Sapu = 1,
+        Filter = 2
+    }
     public Transform crossHitTarget;
-    RaycastWeapon weapon;
+    RaycastWeapon[] Equipweapon = new RaycastWeapon[3];
+    int activeWeaponIndex;
     
-    public Transform weaponParent;
+    public Transform[] weaponSlot;
     public Transform weaponLeftGrip;
     public Transform WeaponRightGrip;
     public UnityEngine.Animations.Rigging.Rig hankIK;
@@ -40,9 +47,20 @@ public class ActiveWeapon : MonoBehaviour
        
     }
 
+    RaycastWeapon GetWeapon(int index)
+    {
+        if(index < 0 || index >= Equipweapon.Length)
+        {
+            return null;
+        }
+        return Equipweapon[index];
+    }
+
     // Update is called once per frame
     void Update()
     {
+        var weapon = GetWeapon(activeWeaponIndex);
+        
         if(weapon)
         {
             hankIK.weight = 1.0f;
@@ -82,17 +100,21 @@ public class ActiveWeapon : MonoBehaviour
 
     public void Equip(RaycastWeapon newWepaon)
     {
+        int weaponSlotIndex = (int)newWepaon.weaponSlot;
+        var weapon = GetWeapon(weaponSlotIndex);
         if(weapon)
         {
             Destroy(weapon.gameObject);
         }
         weapon = newWepaon;
         weapon.raycastDestination = crossHitTarget;
-        weapon.transform.parent = weaponParent;
+        weapon.transform.parent = weaponSlot[weaponSlotIndex];
         weapon.transform.localPosition = Vector3.zero;
         weapon.transform.localRotation = Quaternion.identity;
         rigController.Play("equip_" + weapon.weaponName);
-       
+
+        Equipweapon[weaponSlotIndex] = weapon;
+        activeWeaponIndex = weaponSlotIndex;
     }
 
    
