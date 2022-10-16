@@ -47,6 +47,8 @@ public class ActiveWeapon : MonoBehaviour
        
     }
 
+
+
     RaycastWeapon GetWeapon(int index)
     {
         if(index < 0 || index >= Equipweapon.Length)
@@ -63,41 +65,70 @@ public class ActiveWeapon : MonoBehaviour
         
         if(weapon)
         {
-            hankIK.weight = 1.0f;
-            if (weapon.tag == "Gun" && Input.GetButtonDown("Fire1"))
-            {
-                weapon.StartFiring();
-            }
+            weapon.UpdateWeapon(Time.deltaTime);
 
-            if (weapon.tag == "Gun" && weapon.isFiring)
-            {
-                weapon.UpdateFiring(Time.deltaTime);
-            }
-            weapon.UpdateBullet(Time.deltaTime);
-            if (weapon.tag == "Gun" && Input.GetButtonUp("Fire1"))
-            {
-                weapon.StopFiring();
-            }
-            if( Input.GetKeyDown(KeyCode.X))
-                {
-                bool isHoster = rigController.GetBool("hoster_pistol");
-                rigController.SetBool("hoster_pistol", !isHoster); 
-            }
+            //if ( Input.GetButtonDown("Fire1"))
+            //{
+            //    weapon.StartFiring();
+            //}
 
-            if (weapon.tag == "Sapu" && Input.GetButtonDown("Fire1"))
+            //if ( weapon.isFiring)
+            //{
+            //    weapon.UpdateFiring(Time.deltaTime);
+            //}
+            //weapon.UpdateBullet(Time.deltaTime);
+            //if ( Input.GetButtonUp("Fire1"))
+            //{
+            //    weapon.StopFiring();
+            //}
+            if (Input.GetKeyDown(KeyCode.X))
             {
-                Debug.Log("Kali 2");
-            }
-            if (weapon.tag == "FilterAir" )
-            {
+                ToggleActiveWeapon();
                 
             }
+
+            //if (weapon.tag == "Sapu" && Input.GetButtonDown("Fire1"))
+            //{
+            //    Debug.Log("Kali 2");
+            //}
+            //if (weapon.tag == "FilterAir" )
+            //{
+
+            //}
+        }
+
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SetActiveWeapon(WeaponSlot.Gun);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SetActiveWeapon(WeaponSlot.Sapu);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SetActiveWeapon(WeaponSlot.Filter);
         }
        
-        
-     
-    }
 
+
+
+    }
+   
+    void ToggleActiveWeapon()
+    {
+        bool isHoster = rigController.GetBool("hoster_pistol");
+        if(isHoster)
+        {
+            StartCoroutine(ActiveWeapon1(activeWeaponIndex));
+        }
+        else
+        {
+            
+            StartCoroutine(HosterWeapon(activeWeaponIndex));
+        }
+    }
+  
     public void Equip(RaycastWeapon newWepaon)
     {
         int weaponSlotIndex = (int)newWepaon.weaponSlot;
@@ -108,17 +139,57 @@ public class ActiveWeapon : MonoBehaviour
         }
         weapon = newWepaon;
         weapon.raycastDestination = crossHitTarget;
-        weapon.transform.parent = weaponSlot[weaponSlotIndex];
-        weapon.transform.localPosition = Vector3.zero;
-        weapon.transform.localRotation = Quaternion.identity;
-        rigController.Play("equip_" + weapon.weaponName);
-
+        weapon.transform.SetParent  (weaponSlot[weaponSlotIndex],false);
         Equipweapon[weaponSlotIndex] = weapon;
-        activeWeaponIndex = weaponSlotIndex;
+        SetActiveWeapon(newWepaon.weaponSlot);
+    }
+    void SetActiveWeapon(WeaponSlot weaponSlot)
+    {
+        int hosterIndex = activeWeaponIndex;
+        int activeIndex = (int)weaponSlot;
+
+        if(hosterIndex == activeIndex)
+        {
+            hosterIndex = -1;
+        }
+        StartCoroutine(SwitchWeapon(hosterIndex, activeIndex));
     }
 
-   
-   
+    IEnumerator SwitchWeapon(int hosterIndex, int activeIndex)
+    {
+        yield return StartCoroutine(HosterWeapon(hosterIndex));
+        yield return StartCoroutine(ActiveWeapon1(activeIndex));
+        activeWeaponIndex = activeIndex;
+
+    }
+    IEnumerator HosterWeapon(int index)
+    {
+        var weapon = GetWeapon(index);
+        if(weapon)
+        {
+            rigController.SetBool("hoster_pistol", true);
+            do
+            {
+                yield return new WaitForEndOfFrame();
+            } while (rigController.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
+        }
+    }
+    IEnumerator ActiveWeapon1(int index)
+    { 
+        var weapon = GetWeapon(index);
+        if (weapon)
+        {
+            rigController.SetBool("hoster_pistol", false);
+            rigController.Play("equip_" + weapon.weaponName);
+            do
+            {
+                yield return new WaitForEndOfFrame();
+            } while (rigController.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
+        }
+    }
+
+
+
 
 
 }
