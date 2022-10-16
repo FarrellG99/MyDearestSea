@@ -23,7 +23,7 @@ public class CharacterHealth : MonoBehaviour
             if (_currentHealth <= 0)
             {
                 Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
             else
             {
