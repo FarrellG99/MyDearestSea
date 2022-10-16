@@ -26,7 +26,7 @@ public class ActiveWeapon : MonoBehaviour
     public UnityEngine.Animations.Rigging.Rig hankIK;
 
     public Animator rigController;
-   
+    bool isHostered = false;
     void Start()
     {
         rigController.updateMode = AnimatorUpdateMode.AnimatePhysics;
@@ -63,7 +63,7 @@ public class ActiveWeapon : MonoBehaviour
     {
         var weapon = GetWeapon(activeWeaponIndex);
         
-        if(weapon)
+        if(weapon && !isHostered)
         {
             weapon.UpdateWeapon(Time.deltaTime);
 
@@ -164,6 +164,7 @@ public class ActiveWeapon : MonoBehaviour
     }
     IEnumerator HosterWeapon(int index)
     {
+        isHostered = true;
         var weapon = GetWeapon(index);
         if(weapon)
         {
@@ -185,6 +186,7 @@ public class ActiveWeapon : MonoBehaviour
             {
                 yield return new WaitForEndOfFrame();
             } while (rigController.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
+            isHostered = false;
         }
     }
 
