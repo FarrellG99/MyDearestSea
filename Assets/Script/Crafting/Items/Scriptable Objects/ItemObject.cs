@@ -7,7 +7,8 @@ using UnityEngine;
 public enum ItemType
 {
     Junk,
-    Tool
+    Tool,
+    Coin
 }
 public abstract class ItemObject : ScriptableObject
 {

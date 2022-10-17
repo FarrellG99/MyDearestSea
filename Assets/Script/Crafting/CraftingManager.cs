@@ -14,6 +14,7 @@ public class CraftingManager : MonoBehaviour
 
     public CraftingRecipe sapuRecipe;
     public CraftingRecipe pistolRecipe;
+    public CraftingRecipe filterRecipe;
 
     private bool menuOpened;
     private bool withinPondokRange;
@@ -54,7 +55,7 @@ public class CraftingManager : MonoBehaviour
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha2))
                 {
-                    Debug.Log("Craft Filter Air");
+                    CraftFilterAir();
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha3))
                 {
@@ -101,26 +102,6 @@ public class CraftingManager : MonoBehaviour
         Debug.Log("Boleh craft? " + craftAllowed);
     }
 
-    private void Crafting()
-    {
-        if (craftAllowed)
-        {
-            Debug.Log("Masuk Crafting");
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                sapuRecipe.Craft(junkInventory,toolInventory);
-                Debug.Log("Craft Sapu lidi");
-            }
-            else if (Input.GetKeyDown(KeyCode.X))
-            {
-                Debug.Log("Craft Filter Air");
-            }
-            else if (Input.GetKeyDown(KeyCode.C))
-            {
-                Debug.Log("Craft Pistol Air");
-            }
-        }
-    }
     
     public void CraftSapuLidi()
     {
@@ -132,5 +113,10 @@ public class CraftingManager : MonoBehaviour
     {
         pistolRecipe.Craft(junkInventory, toolInventory);
         Debug.Log("Craft Pistol Air");
+    }
+    public void CraftFilterAir()
+    {
+        filterRecipe.Craft(junkInventory, toolInventory);
+        Debug.Log("Craft Filter Air");
     }
 }
