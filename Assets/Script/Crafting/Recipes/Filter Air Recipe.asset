@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68bd46dcd623df4fb1b166be7f6ae49, type: 3}
+  m_Name: Filter Air Recipe
+  m_EditorClassIdentifier: 
+  materials:
+  - item: {fileID: 11400000, guid: 21b5bb2812178254e854c8bc9ddfaa8a, type: 2}
+    amount: 2
+  results:
+  - item: {fileID: 11400000, guid: d8270eebc12e8d54fac7e41f89b00085, type: 2}
+    amount: 1

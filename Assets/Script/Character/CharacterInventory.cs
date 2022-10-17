@@ -10,5 +10,6 @@ public class CharacterInventory : MonoBehaviour
     private void OnApplicationQuit()
     {
         junkInventory.Container.Clear();
+        toolInventory.Container.Clear();
     }
 }

@@ -13,8 +13,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2248637295610426897, guid: b5d4eee536a8b594aa345eece6eb8a09, type: 3}
       propertyPath: m_fontSize
-      value: 63.25
+      value: 70.9
       objectReference: {fileID: 0}
+    - target: {fileID: 5053936453362392915, guid: b5d4eee536a8b594aa345eece6eb8a09, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -139
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053936453362392915, guid: b5d4eee536a8b594aa345eece6eb8a09, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000089491
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307689474139561229, guid: b5d4eee536a8b594aa345eece6eb8a09, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: eb7bd90e380a5de43822ee65b6d3b4fd, type: 3}
     - target: {fileID: 6392940069238010274, guid: b5d4eee536a8b594aa345eece6eb8a09, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -102,6 +114,22 @@ PrefabInstance:
     - target: {fileID: 6448785413140170477, guid: b5d4eee536a8b594aa345eece6eb8a09, type: 3}
       propertyPath: m_Name
       value: PlasticDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 6586461357866833682, guid: b5d4eee536a8b594aa345eece6eb8a09, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7146895783623491795, guid: b5d4eee536a8b594aa345eece6eb8a09, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 93.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 7146895783623491795, guid: b5d4eee536a8b594aa345eece6eb8a09, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 7146895783623491795, guid: b5d4eee536a8b594aa345eece6eb8a09, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00006946
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5d4eee536a8b594aa345eece6eb8a09, type: 3}

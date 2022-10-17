@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bb677bbae85e646939700aea5ddc3c, type: 3}
   m_Name: Broom
   m_EditorClassIdentifier: 
+  itemName: Broom
   prefab: {fileID: 3654044558657033267, guid: f166339e3ee93b449907617098aac957, type: 3}
   type: 1
   description: 
