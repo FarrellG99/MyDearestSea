@@ -5,6 +5,8 @@ using UnityEngine;
 public class WeaponPickUp : MonoBehaviour
 {
     public RaycastWeapon weaponFab;
+    public ItemObject item;
+    public InventoryObject toolInventory;
     private void OnTriggerEnter(Collider other)
     {
         ActiveWeapon activeWeapon = other.gameObject.GetComponent<ActiveWeapon>();
@@ -12,6 +14,7 @@ public class WeaponPickUp : MonoBehaviour
         {
             RaycastWeapon newWeapon = Instantiate(weaponFab);
             activeWeapon.Equip(newWeapon);
+            toolInventory.AddItem(item, 1);
         }
     }
 }

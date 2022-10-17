@@ -40,7 +40,7 @@ public class Item : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player keluar");
-            pickupText.gameObject.SetActive(true);
+            pickupText.gameObject.SetActive(false);
             pickupAllowed = false;
         }
     }

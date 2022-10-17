@@ -9,35 +9,50 @@ public class CharacterAiming : MonoBehaviour
     public float yawCamera;
     public bool lockCamera;
     public Camera mainCamera;
-
-    public Rig aimLayer;
+    
     public float aimDuration = 0.3f;
 
+    RaycastWeapon weapon;
     
 
     void Start()
     {
-        
+        weapon = GetComponentInChildren<RaycastWeapon>();
         
     }
 
     private void LateUpdate()
     {
-        if(aimLayer)
+        if (weapon)
         {
-            //if (Input.GetButton("Fire2"))
-            //{
-            //    aimLayer.weight += Time.deltaTime / aimDuration;
-            //}
-            //else
-            //{
-            //    aimLayer.weight -= Time.deltaTime / aimDuration;
-            //}
-            aimLayer.weight = 1.0f;
+            
+            if (weapon.tag == "Gun" && Input.GetButtonDown("Fire1"))
+            {
+                weapon.StartFiring();
+            }
+
+            if (weapon.tag == "Gun" && weapon.isFiring)
+            {
+                weapon.UpdateFiring(Time.deltaTime);
+            }
+            weapon.UpdateBullet(Time.deltaTime);
+            if (weapon.tag == "Gun" && Input.GetButtonUp("Fire1"))
+            {
+                weapon.StopFiring();
+            }
+
+            if (weapon.tag == "Sapu" && Input.GetButtonDown("Fire1"))
+            {
+                Debug.Log("Kali 2");
+            }
+            if (weapon.tag == "FilterAir")
+            {
+               
+            }
         }
 
-       
-        
+
+
     }
 
     void FixedUpdate()
@@ -45,15 +60,15 @@ public class CharacterAiming : MonoBehaviour
         
         yawCamera = mainCamera.transform.rotation.eulerAngles.y;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, yawCamera, 0), turnSpeed * Time.fixedDeltaTime);
-        if (lockCamera == true)
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }else
-        {
-            Cursor.visible = true;
+        //if (lockCamera == true)
+        //{
+        //    Cursor.visible = false;
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //}else
+        //{
+        //    Cursor.visible = true;
            
-        }
+        //}
        
     }
 }
