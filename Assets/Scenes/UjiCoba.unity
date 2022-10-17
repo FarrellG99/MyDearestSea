@@ -335,7 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 57dee05cd3191d84f9586ee3251d1880, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 1526843154}
 --- !u!4 &365558427
 Transform:
   m_ObjectHideFlags: 0
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 21b5bb2812178254e854c8bc9ddfaa8a, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 1526843154}
 --- !u!4 &505463449
 Transform:
   m_ObjectHideFlags: 0
@@ -866,7 +866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 57dee05cd3191d84f9586ee3251d1880, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 1526843154}
 --- !u!4 &641418784
 Transform:
   m_ObjectHideFlags: 0
@@ -996,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.41293016
+      value: 0.41293028
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1016,11 +1016,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0053343116
+      value: -0.005334333
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00084928586
+      value: 0.0008492891
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1186,11 +1186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.06466589
+      value: 0.064665906
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.010295578
+      value: -0.010295582
       objectReference: {fileID: 0}
     - target: {fileID: 2873336397249560257, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: crossHitTarget
@@ -1199,6 +1199,10 @@ PrefabInstance:
     - target: {fileID: 2873336397249560258, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_Name
       value: Player_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873336397249560258, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2873336397249716962, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_RootOrder
@@ -1562,7 +1566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 57dee05cd3191d84f9586ee3251d1880, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 1526843154}
 --- !u!4 &1103624719
 Transform:
   m_ObjectHideFlags: 0
@@ -1623,7 +1627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 21b5bb2812178254e854c8bc9ddfaa8a, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 1526843154}
 --- !u!4 &1127707287
 Transform:
   m_ObjectHideFlags: 0
@@ -1734,6 +1738,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3975361114912082882, guid: 9707371dbc2aac244af7157e52865e54, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9707371dbc2aac244af7157e52865e54, type: 3}
 --- !u!20 &1470596195 stripped
@@ -1787,7 +1795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 558930375a302e74ab983d0700cea2ae, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 1526843154}
 --- !u!4 &1485390026
 Transform:
   m_ObjectHideFlags: 0
@@ -1803,6 +1811,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1526843154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3975361114912082881, guid: 9707371dbc2aac244af7157e52865e54, type: 3}
+  m_PrefabInstance: {fileID: 1233164741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1619553174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2003,7 +2022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 21b5bb2812178254e854c8bc9ddfaa8a, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 1526843154}
 --- !u!4 &1862164005
 Transform:
   m_ObjectHideFlags: 0
@@ -2145,7 +2164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 21b5bb2812178254e854c8bc9ddfaa8a, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 1526843154}
 --- !u!4 &1952152887
 Transform:
   m_ObjectHideFlags: 0
@@ -2206,7 +2225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 57dee05cd3191d84f9586ee3251d1880, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 1526843154}
 --- !u!4 &1968473267
 Transform:
   m_ObjectHideFlags: 0
@@ -2268,7 +2287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 558930375a302e74ab983d0700cea2ae, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 1526843154}
 --- !u!4 &1985025274
 Transform:
   m_ObjectHideFlags: 0
@@ -2291,6 +2310,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8814545907078812187, guid: 2abeaf918213d254ca223803ad27284a, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: d30bc7d2351b7374f98f9ebefe250c6e, type: 2}
+    - target: {fileID: 8814545907078812187, guid: 2abeaf918213d254ca223803ad27284a, type: 3}
+      propertyPath: toolInventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 83e54614ad54c0045af4964bb4513471, type: 2}
+    - target: {fileID: 8814545907854477675, guid: 2abeaf918213d254ca223803ad27284a, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a6fb4e0bcf9d674ab74bc8dc9b2752e, type: 2}
+    - target: {fileID: 8814545907854477675, guid: 2abeaf918213d254ca223803ad27284a, type: 3}
+      propertyPath: toolInventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 83e54614ad54c0045af4964bb4513471, type: 2}
     - target: {fileID: 8814545908694099782, guid: 2abeaf918213d254ca223803ad27284a, type: 3}
       propertyPath: m_Name
       value: ExampleWeapon_Full
@@ -2339,6 +2374,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814545908718052769, guid: 2abeaf918213d254ca223803ad27284a, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: d8270eebc12e8d54fac7e41f89b00085, type: 2}
+    - target: {fileID: 8814545908718052769, guid: 2abeaf918213d254ca223803ad27284a, type: 3}
+      propertyPath: toolInventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 83e54614ad54c0045af4964bb4513471, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2abeaf918213d254ca223803ad27284a, type: 3}
 --- !u!1 &2069110709
@@ -2387,7 +2430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 558930375a302e74ab983d0700cea2ae, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 1526843154}
 --- !u!4 &2069110712
 Transform:
   m_ObjectHideFlags: 0
