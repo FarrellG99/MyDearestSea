@@ -109,7 +109,6 @@ public class ActiveWeapon : MonoBehaviour
         {
             SetActiveWeapon(WeaponSlot.Filter);
         }
-       
 
 
 
@@ -152,6 +151,31 @@ public class ActiveWeapon : MonoBehaviour
         {
             hosterIndex = -1;
         }
+        StartCoroutine(SwitchWeapon(hosterIndex, activeIndex));
+    }
+
+    void NextActiveWeapon()
+    {
+        int hosterIndex;
+        int activeIndex = activeWeaponIndex;
+
+        if (activeIndex == weaponSlot.Length)
+        {
+            hosterIndex = activeIndex;
+            activeIndex = 0;
+        }
+        else
+        {
+            hosterIndex = activeWeaponIndex;
+            activeIndex = activeWeaponIndex++;
+        }
+
+        if (hosterIndex == activeIndex)
+        {
+            hosterIndex = -1;
+        }
+
+        
         StartCoroutine(SwitchWeapon(hosterIndex, activeIndex));
     }
 
