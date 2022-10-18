@@ -426,23 +426,23 @@ PrefabInstance:
       objectReference: {fileID: 3940036432451144812, guid: e7195681d4821c847a757d5174cae6ab, type: 3}
     - target: {fileID: 2873336396083057011, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.17479298
+      value: -0.17479296
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396083057011, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.06446865
+      value: 0.06446864
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396083057011, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.011470252
+      value: -0.011470249
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.064666614
+      value: 0.06466663
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0102957
+      value: -0.010295704
       objectReference: {fileID: 0}
     - target: {fileID: 2873336397249560257, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: crossHitTarget
@@ -502,16 +502,12 @@ PrefabInstance:
       objectReference: {fileID: 1703568172528767876}
     - target: {fileID: 2873336398072760649, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.064842746
+      value: 0.06484278
       objectReference: {fileID: 0}
     - target: {fileID: 2873336398072760649, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00912086
+      value: -0.009120865
       objectReference: {fileID: 0}
-    - target: {fileID: 4567604043867517399, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 81fd8b452901d0442a7a803f35467af0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
 --- !u!4 &543450653323881948 stripped
@@ -631,11 +627,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0053350367
+      value: -0.005335071
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0008494019
+      value: 0.00084940746
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -658,10 +654,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8814545907854477675, guid: 2abeaf918213d254ca223803ad27284a, type: 3}
-      propertyPath: weaponFab
-      value: 
-      objectReference: {fileID: 6977678529017382413, guid: 75e8c1b11da53e6448f90cc05637c679, type: 3}
     - target: {fileID: 8814545908694099782, guid: 2abeaf918213d254ca223803ad27284a, type: 3}
       propertyPath: m_Name
       value: ExampleWeapon
