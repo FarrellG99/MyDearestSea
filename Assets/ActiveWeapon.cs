@@ -97,6 +97,7 @@ public class ActiveWeapon : MonoBehaviour
             {
                 Debug.Log("Diem Disini");
             }
+
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -105,7 +106,9 @@ public class ActiveWeapon : MonoBehaviour
             if(count == 4)
             {
                 count = 1;
+
             }
+
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -120,6 +123,8 @@ public class ActiveWeapon : MonoBehaviour
         {
             SetActiveWeapon(WeaponSlot.Filter);
         }
+
+
 
 
 
