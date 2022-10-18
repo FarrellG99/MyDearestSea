@@ -19,6 +19,8 @@ public class ToolDisplay : MonoBehaviour
     public GameObject toolHolder;
     public GameObject currentTool;
 
+    public ActiveWeapon weapon;
+
 
     Dictionary<InventorySlot, GameObject> itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
 

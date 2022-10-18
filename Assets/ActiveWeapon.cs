@@ -27,6 +27,8 @@ public class ActiveWeapon : MonoBehaviour
 
     public Animator rigController;
     bool isHostered = false;
+
+    public int count;
     void Start()
     {
         rigController.updateMode = AnimatorUpdateMode.AnimatePhysics;
@@ -44,7 +46,7 @@ public class ActiveWeapon : MonoBehaviour
            
             Equip(existingWeapon);
         }
-       
+        count = 0;
     }
 
 
@@ -97,17 +99,26 @@ public class ActiveWeapon : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            SetActiveWeapon(WeaponSlot.Gun);
+            count++;
+            if(count == 4)
+            {
+                count = 1;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+
+        switch (count)
         {
-            SetActiveWeapon(WeaponSlot.Sapu);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            SetActiveWeapon(WeaponSlot.Filter);
+            case 1:
+                SetActiveWeapon(WeaponSlot.Gun);
+                break;
+            case 2:
+                SetActiveWeapon(WeaponSlot.Sapu);
+                break;
+            case 3:
+                SetActiveWeapon(WeaponSlot.Filter);
+                break;
         }
 
 
@@ -146,6 +157,7 @@ public class ActiveWeapon : MonoBehaviour
     {
         int hosterIndex = activeWeaponIndex;
         int activeIndex = (int)weaponSlot;
+        Debug.Log(count);
 
         if(hosterIndex == activeIndex)
         {
@@ -154,30 +166,6 @@ public class ActiveWeapon : MonoBehaviour
         StartCoroutine(SwitchWeapon(hosterIndex, activeIndex));
     }
 
-    void NextActiveWeapon()
-    {
-        int hosterIndex;
-        int activeIndex = activeWeaponIndex;
-
-        if (activeIndex == weaponSlot.Length)
-        {
-            hosterIndex = activeIndex;
-            activeIndex = 0;
-        }
-        else
-        {
-            hosterIndex = activeWeaponIndex;
-            activeIndex = activeWeaponIndex++;
-        }
-
-        if (hosterIndex == activeIndex)
-        {
-            hosterIndex = -1;
-        }
-
-        
-        StartCoroutine(SwitchWeapon(hosterIndex, activeIndex));
-    }
 
     IEnumerator SwitchWeapon(int hosterIndex, int activeIndex)
     {
