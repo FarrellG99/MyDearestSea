@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: 22adb5833bae2234f9e33979badd2fc0
+ModelImporter:
+  serializedVersion: 20300
+  internalIDToNameTable:
+  - first:
+      74: 1904204597702986360
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|BezierCircleAction
+  - first:
+      74: -5969390373780439564
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|BezierCurveAction
+  - first:
+      74: 5045848968843683178
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|BezierCurveAction.001
+  - first:
+      74: 4834637806968345497
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|BezierCurveAction.002
+  - first:
+      74: -1468865858511952272
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|Cube.002Action
+  - first:
+      74: 6047482408325971308
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|Cube.003Action
+  - first:
+      74: -7041849772843063390
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|Cylinder.004Action
+  - first:
+      74: -5568929278513238613
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|Cylinder.004Action.001
+  - first:
+      74: -829287372051585921
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|CylinderAction
+  - first:
+      74: 3529135804545098804
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|CylinderAction.001
+  - first:
+      74: -8697422616829169887
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|CylinderAction.002
+  - first:
+      74: -627873576419097022
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|CylinderAction.003
+  - first:
+      74: 5702321091238230328
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|CylinderAction.004
+  - first:
+      74: -8066247517776556315
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|NurbsPathAction
+  - first:
+      74: -4199328250187791536
+    second: BezierCurve.007|BezierCurve.003|BezierCurve.001|NurbsPathAction.001
+  - first:
+      74: 2055496055686721285
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|BezierCircleAction
+  - first:
+      74: 7309385334887686186
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|BezierCircleAction.001
+  - first:
+      74: -8027207736831583564
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|BezierCircleAction.002
+  - first:
+      74: -8168526829282771567
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|BezierCircleAction.004
+  - first:
+      74: 386149196569789534
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|BezierCircleAction.005
+  - first:
+      74: 5131961410435442731
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|BezierCurveAction
+  - first:
+      74: 6474791996083785181
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|BezierCurveAction.001
+  - first:
+      74: 4917637992438238817
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|BezierCurveAction.002
+  - first:
+      74: -258726232705347547
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|Cube.002Action
+  - first:
+      74: 5774956441278210813
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|Cube.003Action
+  - first:
+      74: -3598708726527913017
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|Cylinder.004Action
+  - first:
+      74: -2632537656351554561
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|Cylinder.004Action.001
+  - first:
+      74: 4512777477947129499
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|CylinderAction
+  - first:
+      74: 8027218847975979245
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|CylinderAction.001
+  - first:
+      74: 8753843613374447269
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|CylinderAction.002
+  - first:
+      74: 8020804446199160829
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|CylinderAction.003
+  - first:
+      74: 2159286764572826425
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|CylinderAction.004
+  - first:
+      74: 4634472038725170534
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|NurbsPathAction
+  - first:
+      74: 1525287925821865567
+    second: BezierCurve.007|BezierCurve.004|BezierCurve.001|NurbsPathAction.001
+  - first:
+      74: -4925941312567872503
+    second: BezierCurve.007|bottle|bottle|Cube.002Action
+  - first:
+      74: -4615225074666049468
+    second: BezierCurve.007|bottle|bottle|Cube.003Action
+  - first:
+      74: 704618068314672032
+    second: BezierCurve.007|bottle|bottle|CylinderAction
+  - first:
+      74: 2546945019556695764
+    second: BezierCurve.007|carton milk|carton milk|Cube.002Action
+  - first:
+      74: -3886030110713005934
+    second: BezierCurve.007|carton milk|carton milk|Cube.003Action
+  - first:
+      74: -5145045985253405993
+    second: BezierCurve.007|carton milk|carton milk|CylinderAction
+  - first:
+      74: -5008081532492434668
+    second: BezierCurve.007|sapu|sapu|Cube.002Action
+  - first:
+      74: -8795833788914848564
+    second: BezierCurve.007|sapu|sapu|Cube.003Action
+  - first:
+      74: -532553955166982217
+    second: BezierCurve.007|sapu|sapu|CylinderAction
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

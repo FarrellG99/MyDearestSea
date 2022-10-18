@@ -108,17 +108,17 @@ public class ActiveWeapon : MonoBehaviour
             }
         }
 
-        switch (count)
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            case 1:
-                SetActiveWeapon(WeaponSlot.Gun);
-                break;
-            case 2:
-                SetActiveWeapon(WeaponSlot.Sapu);
-                break;
-            case 3:
-                SetActiveWeapon(WeaponSlot.Filter);
-                break;
+            SetActiveWeapon(WeaponSlot.Gun);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SetActiveWeapon(WeaponSlot.Sapu);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SetActiveWeapon(WeaponSlot.Filter);
         }
 
 
@@ -157,14 +157,14 @@ public class ActiveWeapon : MonoBehaviour
     {
         int hosterIndex = activeWeaponIndex;
         int activeIndex = (int)weaponSlot;
-        Debug.Log(count);
 
-        if(hosterIndex == activeIndex)
+        if (hosterIndex == activeIndex)
         {
             hosterIndex = -1;
         }
         StartCoroutine(SwitchWeapon(hosterIndex, activeIndex));
     }
+
 
 
     IEnumerator SwitchWeapon(int hosterIndex, int activeIndex)
