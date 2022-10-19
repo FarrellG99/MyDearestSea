@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -425,6 +425,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3940036432451144812, guid: e7195681d4821c847a757d5174cae6ab, type: 3}
     - target: {fileID: 2873336396083057011, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873336396083057011, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873336396083057011, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9824254
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873336396083057011, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.17479296
       objectReference: {fileID: 0}
@@ -437,12 +449,20 @@ PrefabInstance:
       value: -0.011470249
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9854423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.15689424
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.06466663
+      value: 0.064666614
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.010295704
+      value: -0.0102957
       objectReference: {fileID: 0}
     - target: {fileID: 2873336397249560257, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: crossHitTarget
@@ -450,7 +470,7 @@ PrefabInstance:
       objectReference: {fileID: 915802048}
     - target: {fileID: 2873336397249560258, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_Name
-      value: MockUp_Control_Player_ThirdPerson_Version_2 (1)
+      value: yo
       objectReference: {fileID: 0}
     - target: {fileID: 2873336397249716962, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_RootOrder
@@ -496,10 +516,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2873336397259066642, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'upper_arm.R'\n\tTransform 'hand.R'\n\tTransform
+        'lower_arm.R'\n\tTransform 'shoulder.R'\n\tTransform 'upper_arm.R'\n\tTransform
+        'hand.R'\n\tTransform 'lower_arm.R'\n\tTransform 'shoulder.R'\n\tTransform
+        'upper_arm.R'\n\tTransform 'hand.R'\n\tand more ..."
+      objectReference: {fileID: 0}
     - target: {fileID: 2873336397332648648, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1703568172528767876}
+    - target: {fileID: 2873336397647841446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.35988536
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873336397647841446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.9783356
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873336398072760649, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9881264
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873336398072760649, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.13899109
+      objectReference: {fileID: 0}
     - target: {fileID: 2873336398072760649, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0.06484278
@@ -508,6 +553,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.009120865
       objectReference: {fileID: 0}
+    - target: {fileID: 4567604043867517399, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 81fd8b452901d0442a7a803f35467af0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
 --- !u!4 &543450653323881948 stripped
@@ -584,6 +633,10 @@ PrefabInstance:
       propertyPath: playerObj
       value: 
       objectReference: {fileID: 2444383605176565052}
+    - target: {fileID: 4325403344699539569, guid: cec745dd4ef465342a0c861d2bac2384, type: 3}
+      propertyPath: DamageWeaponTake
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cec745dd4ef465342a0c861d2bac2384, type: 3}
 --- !u!1001 &5735629494372856910
@@ -627,11 +680,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.005335071
+      value: -0.0053350367
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00084940746
+      value: 0.0008494019
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
