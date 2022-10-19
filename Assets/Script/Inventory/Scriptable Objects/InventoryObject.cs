@@ -66,6 +66,18 @@ public class InventoryObject : ScriptableObject
         }
         return 0;
     }
+
+    public string GetItemName(ItemObject _item)
+    {
+        for (int i = 0; i < Container.Count; i++)
+        {
+            if (Container[i].item == _item)
+            {
+                return Container[i].item.itemName;
+            }
+        }
+        return "NoName";
+    }
 }
 
 [System.Serializable]

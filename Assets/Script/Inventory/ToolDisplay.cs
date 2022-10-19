@@ -21,6 +21,13 @@ public class ToolDisplay : MonoBehaviour
 
     public ActiveWeapon weapon;
 
+    public enum toolSlot
+    {
+        Gun = 0,
+        Sapu = 1,
+        filter = 2
+    }
+
 
     Dictionary<InventorySlot, GameObject> itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
 
