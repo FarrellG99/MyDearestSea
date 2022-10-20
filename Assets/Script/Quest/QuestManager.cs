@@ -105,6 +105,7 @@ public class QuestManager : MonoBehaviour
         for (int i = 0; i < questSOList.Count; i++)
         {
             questSOList[i].currentAmount = 0;
+            Debug.Log("OK");
         }
     }
 }
