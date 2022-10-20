@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public delegate void EnemyKilled();
+    public static event EnemyKilled OnEnemyKilled;
+
     [SerializeField] private float _maxHealth = 3;
     [SerializeField] private GameObject _deathEffect;
     private float _currentHealth;
@@ -24,18 +27,25 @@ public class EnemyHealth : MonoBehaviour
         {
             _currentHealth -= DamageWeaponTake;
             Debug.Log("KenaLoo1");
-            
-            if (_currentHealth <= 0)
-            {
-                Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
-                Destroy(gameObject);
-            }
-            else
-            {
-                _healthbar.UpdateHelathBar(_maxHealth, _currentHealth);
-                //Instantiate(hitEffect, transform.position, Quaternion.identity);
-            }
+            Die();
+           
         }
+    }
+
+    public void Die()
+    {
+        if (_currentHealth <= 0)
+        {
+            Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
+            Destroy(gameObject);
+         
+        }
+        else
+        {
+            _healthbar.UpdateHelathBar(_maxHealth, _currentHealth);
+            //Instantiate(hitEffect, transform.position, Quaternion.identity);
+        }
+       
     }
  
     //private void OnMouseDown()
