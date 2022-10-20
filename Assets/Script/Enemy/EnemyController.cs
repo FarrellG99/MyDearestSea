@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyMesh.SetDestination(playerObj.position);
+
+        enemyMesh.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
     }
 }

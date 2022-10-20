@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5286685943980936374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5286685943980936372}
+  - component: {fileID: 5286685943980936375}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5286685943980936372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5286685943980936374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 321.04898, y: 417.49667, z: -100.78642}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5286685943980936375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5286685943980936374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb90d0950a50bf42b09ecec80e9fd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questSOList:
+  - {fileID: 11400000, guid: fb9e5fb6c9c815d429b0b2b433d256f3, type: 2}
+  - {fileID: 11400000, guid: 3db7ef5a80237ff40b19e818ff13c120, type: 2}
+  - {fileID: 11400000, guid: 4cad9561e546e0d449c1e1444a2afb71, type: 2}
+  - {fileID: 11400000, guid: 186bbca8edb5fbf48ab859eb586cd467, type: 2}
+  - {fileID: 11400000, guid: 2db4b249851a9024589c3d3cf2c4ffde, type: 2}
+  player: {fileID: 0}
+  questTitle: {fileID: 0}
+  questDesc: {fileID: 0}
+  panelQuestComplete: {fileID: 0}
+  completeText: {fileID: 0}
+  junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
+  toolInventory: {fileID: 11400000, guid: 83e54614ad54c0045af4964bb4513471, type: 2}
+  namaItem: 
+  invsWall1: {fileID: 0}
+  invsWall2: {fileID: 0}
+  invsWall3: {fileID: 0}

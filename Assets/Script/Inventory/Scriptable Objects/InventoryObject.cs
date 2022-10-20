@@ -67,6 +67,7 @@ public class InventoryObject : ScriptableObject
         return 0;
     }
 
+
     public string GetItemName(ItemObject _item)
     {
         for (int i = 0; i < Container.Count; i++)
@@ -77,6 +78,18 @@ public class InventoryObject : ScriptableObject
             }
         }
         return "NoName";
+    }
+    
+    public int ContainsItemString(string _itemName)
+    {
+        for (int i = 0; i < Container.Count; i++)
+        {
+            if (Container[i].item.itemName == _itemName)
+            {
+                return Container[i].amount;
+            }
+        }
+        return 0;
     }
 }
 
