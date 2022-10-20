@@ -17,16 +17,10 @@ public class ToolDisplay : MonoBehaviour
     public int currentToolIndex;
     public GameObject[] tools;
     public GameObject toolHolder;
-    public GameObject currentTool;
+    private GameObject currentTool;
 
     public ActiveWeapon weapon;
 
-    public enum toolSlot
-    {
-        Gun = 0,
-        Sapu = 1,
-        filter = 2
-    }
 
 
     Dictionary<InventorySlot, GameObject> itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
@@ -34,8 +28,7 @@ public class ToolDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CreateDisplay();
-        totalTools = inventory.Container.Count;
+        totalTools = 3;
         tools = new GameObject[3];
 
         if(totalTools > 0)
@@ -45,37 +38,24 @@ public class ToolDisplay : MonoBehaviour
                 tools[i] = toolHolder.transform.GetChild(i).gameObject;
                 tools[i].SetActive(false);
             }
-            tools[0].SetActive(true);
-            currentTool = tools[0];
-            currentToolIndex = 0;
+
         }
     }
 
 
     void Update()
     {
-        UpdateDisplay();
-        if(totalTools == 1)
+        if (weapon.gunEquipped)
         {
-            tools[0].SetActive(true);
+            DisplayGun();
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (weapon.sapuEquipped)
         {
-            //ke tool selanjutnya
-            if(currentToolIndex < totalTools-1)
-            {
-                tools[currentToolIndex].SetActive(false);
-                currentToolIndex++;
-                currentTool = tools[currentToolIndex];
-                tools[currentToolIndex].SetActive(true);
-            }
-            else if(currentToolIndex == totalTools - 1)
-            {
-                tools[currentToolIndex].SetActive(false);
-                currentToolIndex = 0;
-                currentTool = tools[currentToolIndex];
-                tools[currentToolIndex].SetActive(true);
-            }
+            DisplaySapu();
+        }
+        if (weapon.filterEquipped)
+        {
+            DisplayFilter();
         }
     }
 
@@ -92,9 +72,7 @@ public class ToolDisplay : MonoBehaviour
             //Kalau di container belum ada objectnya maka akan ditambahkan nama object yang diambil beserta amountnya
             else
             {
-                var obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
-                obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-                itemsDisplayed.Add(inventory.Container[i], obj);
+                /*var obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);*/
                 totalTools++;
                 tools[totalTools-1] = toolHolder.transform.GetChild(totalTools-1).gameObject;
                 if(totalTools > 0)
@@ -106,6 +84,34 @@ public class ToolDisplay : MonoBehaviour
                 
             }
         }
+    }
+
+    public void DisplayGun()
+    {
+        var objGun = toolHolder.transform.GetChild(1).gameObject;
+        tools[1] = toolHolder.transform.GetChild(1).gameObject;
+        currentTool = tools[1];
+        tools[0].SetActive(false);
+        tools[1].SetActive(true);
+        tools[2].SetActive(false);
+    }
+    public void DisplaySapu()
+    {
+        var objSapu = toolHolder.transform.GetChild(0).gameObject;
+        tools[0] = toolHolder.transform.GetChild(0).gameObject;
+        currentTool = tools[0];
+        tools[0].SetActive(true);
+        tools[1].SetActive(false);
+        tools[2].SetActive(false);
+    }
+    public void DisplayFilter()
+    {
+        var objSapu = toolHolder.transform.GetChild(2);
+        tools[2] = toolHolder.transform.GetChild(2).gameObject;
+        currentTool = tools[2];
+        tools[0].SetActive(false);
+        tools[1].SetActive(false);
+        tools[2].SetActive(true);
     }
 
 

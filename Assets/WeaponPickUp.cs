@@ -15,6 +15,19 @@ public class WeaponPickUp : MonoBehaviour
             RaycastWeapon newWeapon = Instantiate(weaponFab);
             activeWeapon.Equip(newWeapon);
             toolInventory.AddItem(item, 1);
+
+            switch (weaponFab.weaponName)
+            {
+                case "sapu":
+                    activeWeapon.sapuEquipped = true;
+                    break;
+                case "pistol":
+                    activeWeapon.gunEquipped = true;
+                    break;
+                case "filter":
+                    activeWeapon.filterEquipped = true;
+                    break;
+            }
         }
     }
 }
