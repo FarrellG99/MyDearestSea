@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6263753736980534653}
   m_Layer: 5
-  m_Name: SapuDisplay
+  m_Name: PistolDisplay (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sapu Lidi
+  m_text: Pistol Air
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 290a471812e4bfd4ca0921d7e5ed9324, type: 3}
+  m_Texture: {fileID: 2800000, guid: 64de9dc4f0630dd43af670dc9c7286aa, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
