@@ -11,6 +11,7 @@ TagManager:
   - Gun
   - Sapu
   - FilterAir
+  - quest2
   layers:
   - Default
   - TransparentFX

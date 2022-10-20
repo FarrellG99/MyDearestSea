@@ -25,7 +25,7 @@ public class CharacterHealth : MonoBehaviour
             _currentHealth -= 1;
             Debug.Log("KenaLoo");
 
-            if (_currentHealth == 0)
+            if (_currentHealth ==  0f)
             {
                 //Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
                 anim.SetBool("Die",true);
