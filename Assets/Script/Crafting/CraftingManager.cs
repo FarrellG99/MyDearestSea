@@ -16,9 +16,15 @@ public class CraftingManager : MonoBehaviour
     public CraftingRecipe pistolRecipe;
     public CraftingRecipe filterRecipe;
 
+    public RaycastWeapon sapuFab;
+    public RaycastWeapon pistolFab;
+    public RaycastWeapon filterFab;
+
     private bool menuOpened;
     private bool withinPondokRange;
     private bool craftAllowed;
+
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -105,17 +111,38 @@ public class CraftingManager : MonoBehaviour
     
     public void CraftSapuLidi()
     {
+        ActiveWeapon activeWeapon = player.gameObject.GetComponent<ActiveWeapon>();
+        if (activeWeapon)
+        {
+            RaycastWeapon newWeapon = Instantiate(sapuFab);
+            activeWeapon.Equip(newWeapon);
+            activeWeapon.sapuEquipped = true;
+        }
         sapuRecipe.Craft(junkInventory, toolInventory);
         Debug.Log("Craft Sapu lidi");
     }
 
     public void CraftPistolAir()
     {
+        ActiveWeapon activeWeapon = player.gameObject.GetComponent<ActiveWeapon>();
+        if (activeWeapon)
+        {
+            RaycastWeapon newWeapon = Instantiate(pistolFab);
+            activeWeapon.Equip(newWeapon);
+            activeWeapon.gunEquipped = true;
+        }
         pistolRecipe.Craft(junkInventory, toolInventory);
         Debug.Log("Craft Pistol Air");
     }
     public void CraftFilterAir()
     {
+        ActiveWeapon activeWeapon = player.gameObject.GetComponent<ActiveWeapon>();
+        if (activeWeapon)
+        {
+            RaycastWeapon newWeapon = Instantiate(filterFab);
+            activeWeapon.Equip(newWeapon);
+            activeWeapon.filterEquipped = true;
+        }
         filterRecipe.Craft(junkInventory, toolInventory);
         Debug.Log("Craft Filter Air");
     }

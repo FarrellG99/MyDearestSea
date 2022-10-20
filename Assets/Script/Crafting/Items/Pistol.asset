@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   itemName: Pistol
-  prefab: {fileID: 2549638887274070453, guid: b6d36e5faf747bc4dac3a55796f8fe36, type: 3}
+  prefab: {fileID: 3654044558657033267, guid: 9f5988cee219a5c47bfcfcb17f57001d, type: 3}
   type: 1
   description: 

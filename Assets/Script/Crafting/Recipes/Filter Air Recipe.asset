@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materials:
   - item: {fileID: 11400000, guid: 21b5bb2812178254e854c8bc9ddfaa8a, type: 2}
-    amount: 2
+    amount: 1
+  - item: {fileID: 11400000, guid: 80966615ae65d2a4d879552e1bf821c0, type: 2}
+    amount: 1
   results:
   - item: {fileID: 11400000, guid: d8270eebc12e8d54fac7e41f89b00085, type: 2}
     amount: 1

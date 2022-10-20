@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Coin
   m_EditorClassIdentifier: 
   itemName: Coin
-  prefab: {fileID: 0}
+  prefab: {fileID: 7638087521844094903, guid: 90ed4f72c90fa2548babf7d95544c67f, type: 3}
   type: 2
   description: 

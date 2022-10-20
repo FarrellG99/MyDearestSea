@@ -29,6 +29,9 @@ public class ActiveWeapon : MonoBehaviour
     bool isHostered = false;
 
     public int count;
+    public bool gunEquipped;
+    public bool sapuEquipped;
+    public bool filterEquipped;
     void Start()
     {
         rigController.updateMode = AnimatorUpdateMode.AnimatePhysics;
@@ -111,17 +114,26 @@ public class ActiveWeapon : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             SetActiveWeapon(WeaponSlot.Gun);
+            gunEquipped = true;
+            filterEquipped = false;
+            sapuEquipped = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SetActiveWeapon(WeaponSlot.Sapu);
+            gunEquipped = false;
+            filterEquipped = false;
+            sapuEquipped = true;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SetActiveWeapon(WeaponSlot.Sapu);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
             SetActiveWeapon(WeaponSlot.Filter);
+            gunEquipped = false;
+            filterEquipped = true;
+            sapuEquipped = false;
         }
 
 
