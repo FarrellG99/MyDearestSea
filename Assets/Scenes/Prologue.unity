@@ -2834,7 +2834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17fab18e477cd794c8bb8357bdda97fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namaScene: UjiCoba
+  namaScene: UjiCoba2
 --- !u!1 &1302720753
 GameObject:
   m_ObjectHideFlags: 0

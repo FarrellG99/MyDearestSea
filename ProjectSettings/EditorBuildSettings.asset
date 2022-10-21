@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Prologue.unity
     guid: c78731441c48e5c4da7962a04eb88828
   - enabled: 1
-    path: Assets/Scenes/UjiCoba.unity
-    guid: e9017d5f96b9f09489b4b37e1d6eb914
+    path: Assets/Scenes/UjiCoba2.unity
+    guid: fab52c2b604529644b36005dc0cb7b66
   m_configObjects: {}
