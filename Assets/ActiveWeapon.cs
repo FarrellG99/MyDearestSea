@@ -96,7 +96,7 @@ public class ActiveWeapon : MonoBehaviour
             {
                 Debug.Log("Kali 2");
             }
-            if (weapon.tag == "FilterAir" && Input.GetButtonDown("Fire1"))
+            if (weapon.tag == "Filter" && Input.GetButtonDown("Fire1"))
             {
                 Debug.Log("Diem Disini");
             }
@@ -135,13 +135,22 @@ public class ActiveWeapon : MonoBehaviour
             filterEquipped = true;
             sapuEquipped = false;
         }
+       
 
 
 
 
 
     }
-   
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "FilterAir")
+        {
+            Destroy(GameObject.FindWithTag("Filter"));
+            StartCoroutine(HosterWeapon(activeWeaponIndex));
+        }
+    }
+
     void ToggleActiveWeapon()
     {
         bool isHoster = rigController.GetBool("hoster_pistol");
@@ -172,6 +181,7 @@ public class ActiveWeapon : MonoBehaviour
     }
     void SetActiveWeapon(WeaponSlot weaponSlot)
     {
+     
         int hosterIndex = activeWeaponIndex;
         int activeIndex = (int)weaponSlot;
 

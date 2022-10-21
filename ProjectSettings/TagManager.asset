@@ -13,6 +13,7 @@ TagManager:
   - FilterAir
   - quest2
   - Obs
+  - Filter
   layers:
   - Default
   - TransparentFX

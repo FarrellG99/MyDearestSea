@@ -95,12 +95,20 @@ public class ToolDisplay : MonoBehaviour
     {
         if (toolInventory.ContainsItem(pistol))
         {
-            var objGun = toolHolder.transform.GetChild(1).gameObject;
-            tools[1] = toolHolder.transform.GetChild(1).gameObject;
-            currentTool = tools[1];
-            tools[0].SetActive(false);
-            tools[1].SetActive(true);
-            tools[2].SetActive(false);
+            if(toolInventory.GetAmount(pistol) > 0)
+            {
+                var objGun = toolHolder.transform.GetChild(1).gameObject;
+                tools[1] = toolHolder.transform.GetChild(1).gameObject;
+                currentTool = tools[1];
+                tools[0].SetActive(false);
+                tools[1].SetActive(true);
+                tools[2].SetActive(false);
+            }
+            else
+            {
+                tools[1].SetActive(false);
+            }
+            
         }
         
     }
@@ -108,24 +116,40 @@ public class ToolDisplay : MonoBehaviour
     {
         if (toolInventory.ContainsItem(sapu))
         {
-            var objSapu = toolHolder.transform.GetChild(0).gameObject;
-            tools[0] = toolHolder.transform.GetChild(0).gameObject;
-            currentTool = tools[0];
-            tools[0].SetActive(true);
-            tools[1].SetActive(false);
-            tools[2].SetActive(false);
+            if (toolInventory.GetAmount(sapu) > 0)
+            {
+                var objSapu = toolHolder.transform.GetChild(0).gameObject;
+                tools[0] = toolHolder.transform.GetChild(0).gameObject;
+                currentTool = tools[0];
+                tools[0].SetActive(true);
+                tools[1].SetActive(false);
+                tools[2].SetActive(false);
+            }
+            else
+            {
+                tools[0].SetActive(false);
+            }
+
         }
     }
     public void DisplayFilter()
     {
         if (toolInventory.ContainsItem(filter))
         {
-            var objSapu = toolHolder.transform.GetChild(2);
-            tools[2] = toolHolder.transform.GetChild(2).gameObject;
-            currentTool = tools[2];
-            tools[0].SetActive(false);
-            tools[1].SetActive(false);
-            tools[2].SetActive(true);
+            if(toolInventory.GetAmount(filter) > 0)
+            {
+                var objfilter = toolHolder.transform.GetChild(2);
+                tools[2] = toolHolder.transform.GetChild(2).gameObject;
+                currentTool = tools[2];
+                tools[0].SetActive(false);
+                tools[1].SetActive(false);
+                tools[2].SetActive(true);
+            }
+            else
+            {
+                tools[2].SetActive(false);
+            }
+
         }
         
     }

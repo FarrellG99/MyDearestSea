@@ -60,15 +60,16 @@ public class CharacterAiming : MonoBehaviour
         
         yawCamera = mainCamera.transform.rotation.eulerAngles.y;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, yawCamera, 0), turnSpeed * Time.fixedDeltaTime);
-        //if (lockCamera == true)
-        //{
-        //    Cursor.visible = false;
-        //    Cursor.lockState = CursorLockMode.Locked;
-        //}else
-        //{
-        //    Cursor.visible = true;
-           
-        //}
-       
+        if (lockCamera == true)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.visible = true;
+
+        }
+
     }
 }
