@@ -31,6 +31,10 @@ public class QuestManager : MonoBehaviour
 
     bool questSelesai = false;
 
+    public GameObject dengerIcon;
+    public ColliderTrigger ctg;
+    public GameObject filterAer;
+
     void Start()
     {
         index = 0;
@@ -59,7 +63,7 @@ public class QuestManager : MonoBehaviour
             }
             timer = 3;
             timerIndex = index;
-            index += 1;
+            index = 6;
             questSelesai = false;
         }
 
@@ -90,7 +94,7 @@ public class QuestManager : MonoBehaviour
             questSOList[index].currentAmount = junkInventory.ContainsItemString(item);
             questTitle.text = questSOList[index].title;
             questDesc.text = questSOList[index].description + "(" + questSOList[index].currentAmount + "/" + questSOList[index].requiredAmount + ")";
-        } else if (questSOList[index].goalType == GoalType.Crafting) {
+        } else if (questSOList[index].goalType == GoalType.Crafting && questSelesai == false) {
             if (questSOList[index].currentAmount >= questSOList[index].requiredAmount)
             {
                 questSelesai = true;
@@ -98,6 +102,19 @@ public class QuestManager : MonoBehaviour
             questSOList[index].currentAmount = toolInventory.ContainsItemString(item);
             questTitle.text = questSOList[index].title;
             questDesc.text = questSOList[index].description + "(" + questSOList[index].currentAmount + "/" + questSOList[index].requiredAmount + ")";
+        } else {
+            if (questSOList[index].questCount == 7)
+            {
+                questTitle.text = questSOList[index].title;
+                questDesc.text = questSOList[index].description;
+                questSelesai = true;
+                dengerIcon.SetActive(true);
+                if (ctg.pasang == 1)
+                {
+                    questSOList[index].currentAmount = ctg.pasang;
+                    questSelesai = true;
+                }
+            }
         }
     }
 

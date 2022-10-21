@@ -3438,12 +3438,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1161275837}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Filter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1161275837
 Transform:
   m_ObjectHideFlags: 0
@@ -4024,7 +4024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1600442150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4039,6 +4039,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderWave: {fileID: 5598305768856395928}
   filter: {fileID: 1161275836}
+  toolInventory: {fileID: 11400000, guid: 83e54614ad54c0045af4964bb4513471, type: 2}
+  filterObject: {fileID: 11400000, guid: d8270eebc12e8d54fac7e41f89b00085, type: 2}
+  pasang: 0
 --- !u!65 &1600442151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4172,9 +4175,17 @@ PrefabInstance:
       value: QuestManager
       objectReference: {fileID: 0}
     - target: {fileID: 5286685943980936375, guid: cc3eb7962cd663d44a9f9393798ca968, type: 3}
+      propertyPath: ctg
+      value: 
+      objectReference: {fileID: 1600442150}
+    - target: {fileID: 5286685943980936375, guid: cc3eb7962cd663d44a9f9393798ca968, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 655948523}
+    - target: {fileID: 5286685943980936375, guid: cc3eb7962cd663d44a9f9393798ca968, type: 3}
+      propertyPath: filterAer
+      value: 
+      objectReference: {fileID: 1161275836}
     - target: {fileID: 5286685943980936375, guid: cc3eb7962cd663d44a9f9393798ca968, type: 3}
       propertyPath: invsWall1
       value: 
@@ -4192,6 +4203,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1434467486}
     - target: {fileID: 5286685943980936375, guid: cc3eb7962cd663d44a9f9393798ca968, type: 3}
+      propertyPath: dengerIcon
+      value: 
+      objectReference: {fileID: 1600442149}
+    - target: {fileID: 5286685943980936375, guid: cc3eb7962cd663d44a9f9393798ca968, type: 3}
       propertyPath: questTitle
       value: 
       objectReference: {fileID: 2075249900}
@@ -4203,6 +4218,22 @@ PrefabInstance:
       propertyPath: panelQuestComplete
       value: 
       objectReference: {fileID: 1884132233}
+    - target: {fileID: 5286685943980936375, guid: cc3eb7962cd663d44a9f9393798ca968, type: 3}
+      propertyPath: questSOList.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286685943980936375, guid: cc3eb7962cd663d44a9f9393798ca968, type: 3}
+      propertyPath: questSOList.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ef6efa1fde6df846b20d739f6c6c5bd, type: 2}
+    - target: {fileID: 5286685943980936375, guid: cc3eb7962cd663d44a9f9393798ca968, type: 3}
+      propertyPath: questSOList.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: d82fcc6a9d32f204ba6cec6c54e950c0, type: 2}
+    - target: {fileID: 5286685943980936375, guid: cc3eb7962cd663d44a9f9393798ca968, type: 3}
+      propertyPath: questSOList.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: af38d060bd2ec9949a2f70840934044b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc3eb7962cd663d44a9f9393798ca968, type: 3}
 --- !u!1001 &1637324952
@@ -5452,6 +5483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Filter
       objectReference: {fileID: 0}
+    - target: {fileID: 3863462212257658560, guid: 66279e40b83925a48bb58043b7ff1082, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3863462212257658566, guid: 66279e40b83925a48bb58043b7ff1082, type: 3}
       propertyPath: Kalah
       value: 
@@ -5796,8 +5831,8 @@ MonoBehaviour:
   - {fileID: 294618172}
   m_EnemyPrefab: {fileID: 6295485767322185455, guid: 65f411611981cc54fa8dcb8758bb7a66, type: 3}
   FilterOn: {fileID: 1161275836}
-  period: 30
-  TimeLeft: 6
+  period: 5
+  TimeLeft: 30
   timeOn: 0
   TimerText: {fileID: 6465717058890446345}
   disable: {fileID: 587179558}

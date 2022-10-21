@@ -6,6 +6,10 @@ public class ColliderTrigger : MonoBehaviour
 {
     public GameObject colliderWave;
     public GameObject filter;
+    public InventoryObject toolInventory;
+    public ItemObject filterObject;
+
+    public int pasang = 0;
     void Start()
     {
         
@@ -23,7 +27,8 @@ public class ColliderTrigger : MonoBehaviour
         {
             colliderWave.SetActive(true);
             filter.SetActive(true);
-
+            toolInventory.ReduceItem(filterObject,1);
+            pasang = 1;
         }
     }
 }

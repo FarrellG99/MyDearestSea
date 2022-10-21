@@ -5,6 +5,7 @@ using UnityEngine;
 public enum GoalType{
         Gathering,
         Crafting,
+        Misc,
     }
 public class QuestSO : ScriptableObject
 {
