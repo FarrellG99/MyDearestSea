@@ -20,17 +20,22 @@ public class FiturHealth : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        currentHealth -= 1;
+        if(other.gameObject.tag == "Enemy")
+        {
+            currentHealth -= 1;
+            if (currentHealth <= 0)
+            {
+                Instantiate(deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                filterHealth.UpdateHealthBar(_maxHealth, currentHealth);
+            }
+        }
+      
 
-        if (currentHealth <= 0)
-        {
-            Instantiate(deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            filterHealth.UpdateHealthBar(_maxHealth, currentHealth);
-        }
+       
     }
 
     private void OnMouseDown()
