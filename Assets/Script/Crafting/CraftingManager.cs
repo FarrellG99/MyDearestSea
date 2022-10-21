@@ -111,39 +111,50 @@ public class CraftingManager : MonoBehaviour
     
     public void CraftSapuLidi()
     {
-        ActiveWeapon activeWeapon = player.gameObject.GetComponent<ActiveWeapon>();
-        if (activeWeapon)
+        if (sapuRecipe.CanCraft(junkInventory))
         {
-            RaycastWeapon newWeapon = Instantiate(sapuFab);
-            activeWeapon.Equip(newWeapon);
-            activeWeapon.sapuEquipped = true;
+            ActiveWeapon activeWeapon = player.gameObject.GetComponent<ActiveWeapon>();
+            if (activeWeapon)
+            {
+                RaycastWeapon newWeapon = Instantiate(sapuFab);
+                activeWeapon.Equip(newWeapon);
+                activeWeapon.sapuEquipped = true;
+            }
+            sapuRecipe.Craft(junkInventory, toolInventory);
+            Debug.Log("Craft Sapu lidi");
         }
-        sapuRecipe.Craft(junkInventory, toolInventory);
-        Debug.Log("Craft Sapu lidi");
+        
     }
 
     public void CraftPistolAir()
     {
-        ActiveWeapon activeWeapon = player.gameObject.GetComponent<ActiveWeapon>();
-        if (activeWeapon)
+        if (pistolRecipe.CanCraft(junkInventory))
         {
-            RaycastWeapon newWeapon = Instantiate(pistolFab);
-            activeWeapon.Equip(newWeapon);
-            activeWeapon.gunEquipped = true;
+            ActiveWeapon activeWeapon = player.gameObject.GetComponent<ActiveWeapon>();
+            if (activeWeapon)
+            {
+                RaycastWeapon newWeapon = Instantiate(pistolFab);
+                activeWeapon.Equip(newWeapon);
+                activeWeapon.gunEquipped = true;
+            }
+            pistolRecipe.Craft(junkInventory, toolInventory);
+            Debug.Log("Craft Pistol Air");
         }
-        pistolRecipe.Craft(junkInventory, toolInventory);
-        Debug.Log("Craft Pistol Air");
+            
     }
     public void CraftFilterAir()
     {
-        ActiveWeapon activeWeapon = player.gameObject.GetComponent<ActiveWeapon>();
-        if (activeWeapon)
+        if (filterRecipe.CanCraft(junkInventory))
         {
-            RaycastWeapon newWeapon = Instantiate(filterFab);
-            activeWeapon.Equip(newWeapon);
-            activeWeapon.filterEquipped = true;
+            ActiveWeapon activeWeapon = player.gameObject.GetComponent<ActiveWeapon>();
+            if (activeWeapon)
+            {
+                RaycastWeapon newWeapon = Instantiate(filterFab);
+                activeWeapon.Equip(newWeapon);
+                activeWeapon.filterEquipped = true;
+            }
+            filterRecipe.Craft(junkInventory, toolInventory);
+            Debug.Log("Craft Filter Air");
         }
-        filterRecipe.Craft(junkInventory, toolInventory);
-        Debug.Log("Craft Filter Air");
     }
 }

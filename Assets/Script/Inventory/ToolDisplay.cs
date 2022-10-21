@@ -19,7 +19,12 @@ public class ToolDisplay : MonoBehaviour
     public GameObject toolHolder;
     private GameObject currentTool;
 
+    public ItemObject sapu;
+    public ItemObject pistol;
+    public ItemObject filter;
+
     public ActiveWeapon weapon;
+    public InventoryObject toolInventory;
 
 
 
@@ -88,30 +93,41 @@ public class ToolDisplay : MonoBehaviour
 
     public void DisplayGun()
     {
-        var objGun = toolHolder.transform.GetChild(1).gameObject;
-        tools[1] = toolHolder.transform.GetChild(1).gameObject;
-        currentTool = tools[1];
-        tools[0].SetActive(false);
-        tools[1].SetActive(true);
-        tools[2].SetActive(false);
+        if (toolInventory.ContainsItem(pistol))
+        {
+            var objGun = toolHolder.transform.GetChild(1).gameObject;
+            tools[1] = toolHolder.transform.GetChild(1).gameObject;
+            currentTool = tools[1];
+            tools[0].SetActive(false);
+            tools[1].SetActive(true);
+            tools[2].SetActive(false);
+        }
+        
     }
     public void DisplaySapu()
     {
-        var objSapu = toolHolder.transform.GetChild(0).gameObject;
-        tools[0] = toolHolder.transform.GetChild(0).gameObject;
-        currentTool = tools[0];
-        tools[0].SetActive(true);
-        tools[1].SetActive(false);
-        tools[2].SetActive(false);
+        if (toolInventory.ContainsItem(sapu))
+        {
+            var objSapu = toolHolder.transform.GetChild(0).gameObject;
+            tools[0] = toolHolder.transform.GetChild(0).gameObject;
+            currentTool = tools[0];
+            tools[0].SetActive(true);
+            tools[1].SetActive(false);
+            tools[2].SetActive(false);
+        }
     }
     public void DisplayFilter()
     {
-        var objSapu = toolHolder.transform.GetChild(2);
-        tools[2] = toolHolder.transform.GetChild(2).gameObject;
-        currentTool = tools[2];
-        tools[0].SetActive(false);
-        tools[1].SetActive(false);
-        tools[2].SetActive(true);
+        if (toolInventory.ContainsItem(filter))
+        {
+            var objSapu = toolHolder.transform.GetChild(2);
+            tools[2] = toolHolder.transform.GetChild(2).gameObject;
+            currentTool = tools[2];
+            tools[0].SetActive(false);
+            tools[1].SetActive(false);
+            tools[2].SetActive(true);
+        }
+        
     }
 
 

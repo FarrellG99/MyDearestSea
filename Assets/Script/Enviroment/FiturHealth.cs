@@ -8,6 +8,8 @@ public class FiturHealth : MonoBehaviour
     [SerializeField] private GameObject deathEffect;
     private float currentHealth;
     [SerializeField] private FilterHealthBar filterHealth;
+    public GameObject Kalah;
+    public GameObject gone;
     void Start()
     {
         currentHealth = _maxHealth;
@@ -26,7 +28,12 @@ public class FiturHealth : MonoBehaviour
             if (currentHealth <= 0)
             {
                 Instantiate(deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
-                gameObject.SetActive(false);
+
+
+
+                Kalah.SetActive(true);
+                StartCoroutine("time");
+
             }
             else
             {
@@ -36,6 +43,17 @@ public class FiturHealth : MonoBehaviour
       
 
        
+    }
+
+    IEnumerator time()
+    {
+        gone.SetActive(false);
+
+        yield return new WaitForSeconds(3);
+        
+        Time.timeScale = 0;
+       
+
     }
 
     private void OnMouseDown()

@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 6602108977287875568}
   - component: {fileID: 6602108977287875571}
   - component: {fileID: 6602108977287875570}
-  - component: {fileID: 3010671398983867623}
+  - component: {fileID: 5566910023823797117}
   m_Layer: 0
   m_Name: monster_v2 1
   m_TagString: Enemy
@@ -411,8 +411,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackToTag: FilterAir
-  playerObj: {fileID: 0}
---- !u!54 &3010671398983867623
+  playerObj: {fileID: 5310549930827180251, guid: 95c69fad08cc69244b667aac58079a64, type: 3}
+--- !u!54 &5566910023823797117
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -423,7 +423,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
