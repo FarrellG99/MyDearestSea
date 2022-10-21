@@ -48,6 +48,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 21b5bb2812178254e854c8bc9ddfaa8a, type: 2}
   coin: {fileID: 11400000, guid: 80966615ae65d2a4d879552e1bf821c0, type: 2}
   junkInventory: {fileID: 11400000, guid: 84bf33fa7e572ea4da2fbd747fed348e, type: 2}
+  player: {fileID: 0}
   pickupText: {fileID: 0}
 --- !u!64 &2394570740943496155
 MeshCollider:
@@ -76,11 +77,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea3a810fb03e2b84a8757001eecc6010, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea3a810fb03e2b84a8757001eecc6010, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea3a810fb03e2b84a8757001eecc6010, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea3a810fb03e2b84a8757001eecc6010, type: 3}
       propertyPath: m_LocalPosition.x

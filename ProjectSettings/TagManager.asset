@@ -12,6 +12,7 @@ TagManager:
   - Sapu
   - FilterAir
   - quest2
+  - Obs
   layers:
   - Default
   - TransparentFX
