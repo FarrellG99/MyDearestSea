@@ -135,6 +135,10 @@ PrefabInstance:
       value: Scrap
       objectReference: {fileID: 0}
     - target: {fileID: 8525410247575776488, guid: a2b87a6a002dd8448829f8e2bd22d8ab, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 8525410247575776488, guid: a2b87a6a002dd8448829f8e2bd22d8ab, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -607,6 +611,10 @@ PrefabInstance:
       value: Plastic (5)
       objectReference: {fileID: 0}
     - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -885,6 +893,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -946,6 +958,10 @@ PrefabInstance:
       value: Plastic (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -962,6 +978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scrap (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
     - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
       propertyPath: pickupText
       value: 
@@ -1162,6 +1182,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -1208,11 +1232,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.005333647
+      value: -0.0053337244
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0008491803
+      value: 0.00084919255
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1340,6 +1364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scrap (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
     - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
       propertyPath: pickupText
       value: 
@@ -1511,11 +1539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.064665236
+      value: 0.06466527
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.010295477
+      value: -0.010295482
       objectReference: {fileID: 0}
     - target: {fileID: 2873336397249560257, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: crossHitTarget
@@ -1618,6 +1646,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scrap (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
     - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
       propertyPath: pickupText
       value: 
@@ -1728,6 +1760,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
     - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
       propertyPath: pickupText
       value: 
@@ -1879,6 +1915,10 @@ PrefabInstance:
       value: Scrap (13)
       objectReference: {fileID: 0}
     - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -1939,6 +1979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scrap (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
     - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
       propertyPath: pickupText
       value: 
@@ -2044,6 +2088,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plastic (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
     - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
       propertyPath: pickupText
       value: 
@@ -2187,6 +2235,10 @@ PrefabInstance:
       value: Scrap (10)
       objectReference: {fileID: 0}
     - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -2292,6 +2344,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -2369,6 +2425,10 @@ PrefabInstance:
       value: Plastic (8)
       objectReference: {fileID: 0}
     - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -2434,6 +2494,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
     - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
       propertyPath: pickupText
       value: 
@@ -2552,6 +2616,10 @@ PrefabInstance:
       value: Scrap (12)
       objectReference: {fileID: 0}
     - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -2657,6 +2725,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -2717,6 +2789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plastic (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
     - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
       propertyPath: pickupText
       value: 
@@ -2779,6 +2855,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -2800,6 +2880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scrap (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
     - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
       propertyPath: pickupText
       value: 
@@ -3009,6 +3093,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -3075,6 +3163,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -3135,6 +3227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plastic (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
     - target: {fileID: 6753246174578582398, guid: 8219371518d7a2448aa19d3a1f9f08a2, type: 3}
       propertyPath: pickupText
       value: 
@@ -3208,6 +3304,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
+    - target: {fileID: 4340014804748577651, guid: 8ff53b59e2e7f494888e53628eb19ad4, type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1526843154}
@@ -3224,6 +3324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scrap (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 655948523}
     - target: {fileID: 6780938058157291432, guid: 2f4b230da511bd64696f3d8f2920cee9, type: 3}
       propertyPath: pickupText
       value: 
