@@ -35,6 +35,15 @@ public class QuestManager : MonoBehaviour
     public ColliderTrigger ctg;
     public GameObject filterAer;
 
+    // public GameObject Aer0;
+    // public GameObject Aer1;
+    // public GameObject Aer2;
+    // public GameObject Aer3;
+
+    // private Color NewColor;
+
+    // public Material changeMat;
+
     void Start()
     {
         index = 0;
@@ -44,7 +53,6 @@ public class QuestManager : MonoBehaviour
     }
 
     void Update(){
-        Debug.Log(index.ToString());
         if (questSelesai)
         {
             if (questSOList[index].questCount == 1)
@@ -55,11 +63,14 @@ public class QuestManager : MonoBehaviour
             {
                 open2 = 1;
             }
-            Debug.Log(open1 + " " + open2);
             if (open1 == 1 && open2 == 1)
             {
                 invsWall1.SetActive(false);
                 invsWall2.SetActive(false);
+            }
+            if (questSOList[index].questCount == 5)
+            {
+                invsWall3.SetActive(false);
             }
             timer = 3;
             timerIndex = index;
@@ -73,7 +84,6 @@ public class QuestManager : MonoBehaviour
             panelQuestComplete.SetActive(true);
             completeText.text = questSOList[timerIndex].title + " Telah selesai.";
             timer -= Time.deltaTime;
-            Debug.Log(timer);
         } else {
             timerIndex = -1;
             panelQuestComplete.SetActive(false);
@@ -109,6 +119,10 @@ public class QuestManager : MonoBehaviour
                 questDesc.text = questSOList[index].description;
                 questSelesai = true;
                 dengerIcon.SetActive(true);
+                // Aer0.GetComponent<MeshRenderer>().material = changeMat;
+                // Aer1.GetComponent<MeshRenderer>().material = changeMat;
+                // Aer2.GetComponent<MeshRenderer>().material = changeMat;
+                // Aer3.GetComponent<MeshRenderer>().material = changeMat;
                 if (ctg.pasang == 1)
                 {
                     questSOList[index].currentAmount = ctg.pasang;

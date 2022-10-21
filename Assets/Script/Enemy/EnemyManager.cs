@@ -17,6 +17,15 @@ public class EnemyManager : MonoBehaviour
     public GameObject disable;
     public GameObject WinConditional;
 
+    public GameObject Aer0;
+    public GameObject Aer1;
+    public GameObject Aer2;
+    public GameObject Aer3;
+
+    private Color NewColor;
+
+    public Material changeMat;
+
     void Start()
     {
         
@@ -35,14 +44,23 @@ public class EnemyManager : MonoBehaviour
             }
             else
             {
-                Time.timeScale = 0;
-                WinConditional.SetActive(true);
-                Debug.Log("Time is UP!");
-                TimeLeft = 0;
+                StartCoroutine("winWater");
                 timeOn = false;
-                Cursor.visible = true;
+               
             }
         }
+
+    }
+    IEnumerator winWater()
+    {
+         Cursor.visible = true;
+          Aer0.GetComponent<MeshRenderer>().material = changeMat;
+            Aer1.GetComponent<MeshRenderer>().material = changeMat;
+            Aer2.GetComponent<MeshRenderer>().material = changeMat;
+            Aer3.GetComponent<MeshRenderer>().material = changeMat;
+          yield return new WaitForSeconds(3);
+            Time.timeScale = 0;
+            WinConditional.SetActive(true);
 
     }
     IEnumerator delete()
