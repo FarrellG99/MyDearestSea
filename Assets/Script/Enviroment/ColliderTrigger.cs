@@ -8,6 +8,7 @@ public class ColliderTrigger : MonoBehaviour
     public GameObject filter;
     public InventoryObject toolInventory;
     public ItemObject filterObject;
+    public GameObject music;
 
     public int pasang = 0;
     void Start()
@@ -29,6 +30,7 @@ public class ColliderTrigger : MonoBehaviour
             filter.SetActive(true);
             toolInventory.ReduceItem(filterObject,1);
             pasang = 1;
+            music.SetActive(true);
         }
     }
 }
