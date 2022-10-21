@@ -44,6 +44,7 @@ public class PauseController : MonoBehaviour
         pausePanel.SetActive(true);
         pauseActive = true;
         Time.timeScale = 0;
+        Cursor.visible = true;
     }
 
     public void Unpause()
@@ -51,6 +52,7 @@ public class PauseController : MonoBehaviour
         Time.timeScale = 1;
         pausePanel.SetActive(false);
         pauseActive = false;
+        Cursor.visible = false;
     }
 
     public void GoToMenu()

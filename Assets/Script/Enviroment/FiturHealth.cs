@@ -32,7 +32,7 @@ public class FiturHealth : MonoBehaviour
 
 
                 Kalah.SetActive(true);
-                StartCoroutine("time");
+                Time.timeScale = 0;
              
                     Cursor.visible = true;
                    
@@ -44,6 +44,7 @@ public class FiturHealth : MonoBehaviour
                 filterHealth.UpdateHealthBar(_maxHealth, currentHealth);
             }
         }
+
       
 
        
@@ -55,26 +56,12 @@ public class FiturHealth : MonoBehaviour
 
         yield return new WaitForSeconds(2);
         
-        Time.timeScale = 0;
+        
        
 
     }
 
-    private void OnMouseDown()
-    {
-        currentHealth -= 1;
-
-        if (currentHealth <= 0)
-        {
-            Instantiate(deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            filterHealth.UpdateHealthBar(_maxHealth, currentHealth);
-        }
-    
-}
+   
     void Update()
     {
        

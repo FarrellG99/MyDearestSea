@@ -19,6 +19,9 @@ public class CharacterHealth : MonoBehaviour
         _currentHealth = _maxHealth;
         _healthBar.UpdateHealthBar(_maxHealth, _currentHealth);
     }
+
+    
+    
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
@@ -36,6 +39,7 @@ public class CharacterHealth : MonoBehaviour
                 Cursor.visible = true;
 
 
+
             }
            
             else
@@ -51,6 +55,7 @@ public class CharacterHealth : MonoBehaviour
         yield return new WaitForSeconds(2f);
         GetComponent<CharacterLocomotion>().enabled = false;
         GetComponent<CharacterAiming>().enabled = false;
+        Cursor.visible = true;
     }
 
     IEnumerator Dead()
