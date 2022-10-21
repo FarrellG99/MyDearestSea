@@ -33,6 +33,10 @@ public class FiturHealth : MonoBehaviour
 
                 Kalah.SetActive(true);
                 StartCoroutine("time");
+             
+                    Cursor.visible = true;
+                   
+                
 
             }
             else
@@ -49,7 +53,7 @@ public class FiturHealth : MonoBehaviour
     {
         gone.SetActive(false);
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         
         Time.timeScale = 0;
        

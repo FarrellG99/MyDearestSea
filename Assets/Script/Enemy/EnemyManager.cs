@@ -40,6 +40,7 @@ public class EnemyManager : MonoBehaviour
                 Debug.Log("Time is UP!");
                 TimeLeft = 0;
                 timeOn = false;
+                Cursor.visible = true;
             }
         }
 

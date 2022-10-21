@@ -2653,7 +2653,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2865,11 +2865,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.005333647
+      value: -0.0053337244
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0008491803
+      value: 0.00084919255
       objectReference: {fileID: 0}
     - target: {fileID: 9120266399887333274, guid: 5a4e2891260a88e4e88b0891bf26d0ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3233,11 +3233,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.064665236
+      value: 0.06466527
       objectReference: {fileID: 0}
     - target: {fileID: 2873336396398584446, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.010295477
+      value: -0.010295482
       objectReference: {fileID: 0}
     - target: {fileID: 2873336397249560257, guid: 9d88bd37288d37941bae42d2260cf9e9, type: 3}
       propertyPath: crossHitTarget
@@ -6868,7 +6868,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: e1e302766f622924a9a9c64fe9eb92c4, type: 3}
     m_FontSize: 84
     m_FontStyle: 1
     m_BestFit: 0

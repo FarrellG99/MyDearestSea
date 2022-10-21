@@ -33,8 +33,8 @@ public class CharacterHealth : MonoBehaviour
                 StartCoroutine("die");
                
                 StartCoroutine("Dead");
-              
-               
+                Cursor.visible = true;
+
 
             }
            

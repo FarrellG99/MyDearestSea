@@ -63,7 +63,7 @@ public class CharacterAiming : MonoBehaviour
         if (lockCamera == true)
         {
             Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+           
         }
         else
         {
