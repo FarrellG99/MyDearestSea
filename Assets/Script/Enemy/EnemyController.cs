@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
+    public string AttackToTag;
     public Transform playerObj;
     protected NavMeshAgent enemyMesh;
     void Start()
@@ -16,6 +17,6 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
 
-        enemyMesh.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
+        enemyMesh.SetDestination(GameObject.FindGameObjectWithTag(AttackToTag).transform.position);
     }
 }

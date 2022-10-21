@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 5255430111780695716}
   - component: {fileID: 5255430111780695738}
   m_Layer: 0
-  m_Name: monster _v3
+  m_Name: monster_v3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,10 +259,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.52320457
+  m_Height: 1.0464091
   m_Direction: 1
-  m_Center: {x: 0, y: 0.25805664, z: 0}
+  m_Center: {x: 0, y: 0.25805664, z: -0.023204565}
 --- !u!136 &5255430111780695736
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -273,10 +273,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.59
-  m_Height: 1
+  m_Radius: 0.76
+  m_Height: 1.3325584
   m_Direction: 1
-  m_Center: {x: 0, y: 0.25805664, z: 0}
+  m_Center: {x: 0, y: 0.25805664, z: -0.07627928}
 --- !u!95 &5255430111780695743
 Animator:
   serializedVersion: 3
@@ -308,7 +308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d04e091e2f3884bb0099c1fcf65d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObj: {fileID: 7535632280501514836, guid: fa1746f6506ffd841a5af9d5adce2f83, type: 3}
+  AttackToTag: FilterAir
+  playerObj: {fileID: 5310549930827180251, guid: 95c69fad08cc69244b667aac58079a64, type: 3}
 --- !u!195 &5255430111780695716
 NavMeshAgent:
   m_ObjectHideFlags: 0

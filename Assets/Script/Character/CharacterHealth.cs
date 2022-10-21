@@ -10,6 +10,7 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private CharacterHealthBar _healthBar;
     private Animator anim;
     CapsuleCollider playerCollider;
+    public GameObject PanelGameOver;
     
     void Start()
     {
@@ -28,10 +29,10 @@ public class CharacterHealth : MonoBehaviour
             if (_currentHealth ==  0f)
             {
                 //Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
-                anim.SetBool("Die",true);
-                playerCollider.height = 1.23f;
-                //gameObject.SetActive(false);
+               
                 StartCoroutine("die");
+               
+                StartCoroutine("Dead");
               
                
 
@@ -50,6 +51,15 @@ public class CharacterHealth : MonoBehaviour
         yield return new WaitForSeconds(2f);
         GetComponent<CharacterLocomotion>().enabled = false;
         GetComponent<CharacterAiming>().enabled = false;
+    }
+
+    IEnumerator Dead()
+    {
+        anim.SetBool("Die", true);
+        playerCollider.height = 1.23f;
+        yield return new WaitForSeconds(2);
+        Time.timeScale = 0;
+        PanelGameOver.SetActive(true);
     }
    
 }
