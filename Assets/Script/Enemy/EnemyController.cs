@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public string AttackToTag;
-    public Transform playerObj;
+
     protected NavMeshAgent enemyMesh;
     void Start()
     {

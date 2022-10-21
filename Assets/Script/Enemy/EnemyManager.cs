@@ -7,27 +7,25 @@ public class EnemyManager : MonoBehaviour
     public Transform[] m_SpawnPoint;
     public GameObject m_EnemyPrefab;
     public GameObject FilterOn;
-    public GameObject PanelWinner;
     private float nextActionTime = 0.0f;
     public float period;
 
     public float TimeLeft;
     public bool timeOn = false;
     public Text TimerText;
+
+    public GameObject disable;
     void Start()
     {
-        timeOn = true;
+        
     }
     private void Update()
     {
-        if(Time.time > nextActionTime)
-        {
-            nextActionTime += period;
-            SpawnNewEnemy();
-        }
+        
 
         if (timeOn)
         {
+            StartCoroutine("delete");
             if (TimeLeft > 0)
             {
                 TimeLeft -= Time.deltaTime;
@@ -39,19 +37,24 @@ public class EnemyManager : MonoBehaviour
                 TimeLeft = 0;
                 timeOn = false;
             }
-
-
-            if(TimeLeft == 0)
-            {
-                PanelWinner.SetActive(true);
-                Time.timeScale = 0f;
-            }
         }
 
     }
+    IEnumerator delete()
+    {
+        if (Time.time > nextActionTime)
+        {
+            nextActionTime += period;
+            SpawnNewEnemy();
+        }
+        yield return new WaitForSeconds(1);
+        disable.SetActive(false);
+        EnemyHealth.OnEnemyKilled += SpawnNewEnemy;
+    }
     private void OnEnable()
     {
-        EnemyHealth.OnEnemyKilled += SpawnNewEnemy;
+        timeOn = true;
+        
     }
 
 

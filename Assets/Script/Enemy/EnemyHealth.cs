@@ -36,6 +36,10 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
 
         }
+        if(other.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
 
 
     }
