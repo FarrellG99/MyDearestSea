@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColliderTrigger : MonoBehaviour
 {
     public GameObject colliderWave;
+    public GameObject filter;
     void Start()
     {
         
@@ -21,6 +22,8 @@ public class ColliderTrigger : MonoBehaviour
         if(other.gameObject.tag =="Player")
         {
             colliderWave.SetActive(true);
+            filter.SetActive(true);
+
         }
     }
 }

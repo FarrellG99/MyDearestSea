@@ -30,10 +30,19 @@ public class EnemyHealth : MonoBehaviour
             Die();
            
         }
+        if (other.gameObject.tag == "FilterAir")
+        {
+            Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
+            Destroy(gameObject);
+
+        }
+
+
     }
 
     public void Die()
     {
+        _currentHealth -= 1;
         if (_currentHealth <= 0)
         {
             Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));

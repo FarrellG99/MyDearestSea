@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Pistol Air Recipe
   m_EditorClassIdentifier: 
   materials:
+  - item: {fileID: 11400000, guid: 57dee05cd3191d84f9586ee3251d1880, type: 2}
+    amount: 2
   - item: {fileID: 11400000, guid: 21b5bb2812178254e854c8bc9ddfaa8a, type: 2}
-    amount: 1
+    amount: 8
+  - item: {fileID: 11400000, guid: 558930375a302e74ab983d0700cea2ae, type: 2}
+    amount: 2
   - item: {fileID: 11400000, guid: 80966615ae65d2a4d879552e1bf821c0, type: 2}
-    amount: 1
+    amount: 12
   results:
   - item: {fileID: 11400000, guid: d30bc7d2351b7374f98f9ebefe250c6e, type: 2}
     amount: 1

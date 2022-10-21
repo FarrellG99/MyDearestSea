@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
     public ItemObject item;
     public ItemObject coin;
     public InventoryObject junkInventory;
+    public GameObject player;
 
     public TextMeshProUGUI pickupText;
 
@@ -48,7 +49,15 @@ public class Item : MonoBehaviour
 
     private void PickUp()
     {
-        junkInventory.AddItem(item, 1);
+        ActiveWeapon activeWeapon = player.gameObject.GetComponent<ActiveWeapon>();
+        if (activeWeapon.sapuEquipped)
+        {
+            junkInventory.AddItem(item, 2);
+        }
+        else
+        {
+            junkInventory.AddItem(item, 1);
+        }
         junkInventory.AddItem(coin, 1);
         Destroy(gameObject);
         pickupText.gameObject.SetActive(false);
