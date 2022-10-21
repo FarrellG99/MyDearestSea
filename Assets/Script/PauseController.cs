@@ -7,6 +7,9 @@ public class PauseController : MonoBehaviour
 {
     public GameObject pausePanel;
     private bool pauseActive;
+    public InventoryObject junkInventory;
+    public InventoryObject toolInventory;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +32,13 @@ public class PauseController : MonoBehaviour
             }
         }
     }
-
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        junkInventory.Container.Clear();
+        toolInventory.Container.Clear();
+        Time.timeScale = 1;
+    }
     public void Pause()
     {
         pausePanel.SetActive(true);

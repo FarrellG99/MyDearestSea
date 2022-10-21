@@ -15,6 +15,8 @@ public class EnemyManager : MonoBehaviour
     public Text TimerText;
 
     public GameObject disable;
+    public GameObject WinConditional;
+
     void Start()
     {
         
@@ -33,6 +35,8 @@ public class EnemyManager : MonoBehaviour
             }
             else
             {
+                Time.timeScale = 0;
+                WinConditional.SetActive(true);
                 Debug.Log("Time is UP!");
                 TimeLeft = 0;
                 timeOn = false;
@@ -47,7 +51,7 @@ public class EnemyManager : MonoBehaviour
             nextActionTime += period;
             SpawnNewEnemy();
         }
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(5f);
         disable.SetActive(false);
         EnemyHealth.OnEnemyKilled += SpawnNewEnemy;
     }
