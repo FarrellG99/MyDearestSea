@@ -63,7 +63,7 @@ public class QuestManager : MonoBehaviour
             }
             timer = 3;
             timerIndex = index;
-            index = 6;
+            index += 1;
             questSelesai = false;
         }
 
