@@ -53,13 +53,14 @@ public class EnemyManager : MonoBehaviour
     }
     IEnumerator winWater()
     {
-         Cursor.visible = true;
+        
           Aer0.GetComponent<MeshRenderer>().material = changeMat;
             Aer1.GetComponent<MeshRenderer>().material = changeMat;
             Aer2.GetComponent<MeshRenderer>().material = changeMat;
             Aer3.GetComponent<MeshRenderer>().material = changeMat;
           yield return new WaitForSeconds(3);
-            Time.timeScale = 0;
+        Cursor.visible = true;
+        Time.timeScale = 0;
             WinConditional.SetActive(true);
 
     }
