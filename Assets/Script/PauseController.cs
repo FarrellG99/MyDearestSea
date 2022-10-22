@@ -10,6 +10,8 @@ public class PauseController : MonoBehaviour
     public InventoryObject junkInventory;
     public InventoryObject toolInventory;
 
+    public QuestManager questManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,7 @@ public class PauseController : MonoBehaviour
     }
     public void Restart()
     {
+        questManager.index = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         junkInventory.Container.Clear();
         toolInventory.Container.Clear();

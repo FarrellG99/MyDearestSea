@@ -25,7 +25,7 @@ public class QuestManager : MonoBehaviour
 
     int open1, open2;
 
-    int index;
+    public int index;
     float timer = 0;
     int timerIndex;
 
@@ -43,6 +43,9 @@ public class QuestManager : MonoBehaviour
     // private Color NewColor;
 
     // public Material changeMat;
+    void Awake() {
+        index = 0;
+    }
 
     void Start()
     {
@@ -68,7 +71,7 @@ public class QuestManager : MonoBehaviour
                 invsWall1.SetActive(false);
                 invsWall2.SetActive(false);
             }
-            if (questSOList[index].questCount == 5)
+            if (questSOList[index].questCount == 7)
             {
                 invsWall3.SetActive(false);
             }
